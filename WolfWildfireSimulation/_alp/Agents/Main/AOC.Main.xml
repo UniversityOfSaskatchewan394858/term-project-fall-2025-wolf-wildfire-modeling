@@ -2,6 +2,7 @@
 <ActiveObjectClass>
 	<Id>1761256096259</Id>
 	<Name><![CDATA[Main]]></Name>
+	<StartupCode><![CDATA[deliverToRandomAgentInside( "Ignite" );]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1761256096264</Id>
@@ -46,14 +47,14 @@
 			<Code><![CDATA[1.0]]></Code>
 			<Unit Class="TimeUnits">SECOND</Unit>
 		</StepDurationCode>
-		<SpaceType>CONTINUOUS</SpaceType>
+		<SpaceType>DISCRETE</SpaceType>
 		<WidthCode>500</WidthCode>
 		<HeightCode>500</HeightCode>
 		<ZHeightCode>0</ZHeightCode>
-		<ColumnsCountCode>100</ColumnsCountCode>
-		<RowsCountCode>100</RowsCountCode>
-		<NeigborhoodType>MOORE</NeigborhoodType>
-		<LayoutType>USER_DEF</LayoutType>
+		<ColumnsCountCode>40</ColumnsCountCode>
+		<RowsCountCode>40</RowsCountCode>
+		<NeigborhoodType>EUCLIDIAN</NeigborhoodType>
+		<LayoutType>ARRANGED</LayoutType>
 		<NetworkType>USER_DEF</NetworkType>
 		<ConnectionsPerAgentCode>2</ConnectionsPerAgentCode>
 		<ConnectionsRangeCode>50</ConnectionsRangeCode>
@@ -118,6 +119,7 @@
 			<LineArrowPosition>END</LineArrowPosition>
 		</AgentLink>
 	</AgentLinks>
+	<EmbeddedObjects xmlns:al="http://anylogic.com"/>
 	<Presentation>
 		<Level>
 			<Id>1761256096265</Id>
@@ -135,5 +137,27 @@
 			<Z>0</Z>
 			<LevelVisibility>DIM_NON_CURRENT</LevelVisibility>
 		</Level>
+		<EmbeddedObjectPresentation>
+			<Id>1761801523400</Id>
+			<Name><![CDATA[cells_presentation]]></Name>
+			<X>20</X>
+			<Y>20</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>true</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+			<EmbeddedIcon>false</EmbeddedIcon>
+			<Z>0</Z>
+			<Rotation>0.0</Rotation>
+			<ScaleType>AUTOMATICALLY_CALCULATED</ScaleType>
+			<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
+			<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
+			<Latitude>0.0</Latitude>
+			<Longitude>0.0</Longitude>
+		</EmbeddedObjectPresentation>
 	</Presentation>
 </ActiveObjectClass>
