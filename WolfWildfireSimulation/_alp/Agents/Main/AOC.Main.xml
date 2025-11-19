@@ -2,7 +2,8 @@
 <ActiveObjectClass>
 	<Id>1761256096259</Id>
 	<Name><![CDATA[Main]]></Name>
-	<StartupCode><![CDATA[deliverToRandomAgentInside( "Ignite" );]]></StartupCode>
+	<StartupCode><![CDATA[Data = new DataAccessorAndFormatter();
+deliverToRandomAgentInside( "Ignite" );]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1761256096264</Id>
@@ -94,6 +95,31 @@
 	</ScaleRuler>
 	<CurrentLevel>1761256096265</CurrentLevel>
 	<ConnectionsId>1761256096260</ConnectionsId>
+	<Variables xmlns:al="http://anylogic.com"/>
+	<Dependences>
+		<Link SourceId="1763184481274" TargetId="1763184566763" Polarity="null">
+			<Height>20.0</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-60</X>
+				<Y>80</Y>
+			</Direction>
+			<Id>1763184485337</Id>
+			<Name><![CDATA[Data - stock]]></Name>
+			<X>550</X>
+			<Y>110</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color>-11832691</Color>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+	</Dependences>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1761256096260</Id>
