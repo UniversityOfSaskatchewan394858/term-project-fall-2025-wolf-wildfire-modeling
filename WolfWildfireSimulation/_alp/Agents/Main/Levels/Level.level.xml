@@ -48,8 +48,8 @@
 			<Rectangle>
 				<Id>1763622971605</Id>
 				<Name><![CDATA[rectangle1]]></Name>
-				<X>54</X>
-				<Y>53</Y>
+				<X>89</X>
+				<Y>58</Y>
 				<Label>
 					<X>10</X>
 					<Y>10</Y>
@@ -74,8 +74,8 @@
 			<Rectangle>
 				<Id>1763623165327</Id>
 				<Name><![CDATA[rectangle3]]></Name>
-				<X>189</X>
-				<Y>53</Y>
+				<X>224</X>
+				<Y>58</Y>
 				<Label>
 					<X>10</X>
 					<Y>10</Y>
@@ -100,8 +100,8 @@
 			<Rectangle>
 				<Id>1763623169836</Id>
 				<Name><![CDATA[rectangle4]]></Name>
-				<X>324</X>
-				<Y>53</Y>
+				<X>359</X>
+				<Y>58</Y>
 				<Label>
 					<X>10</X>
 					<Y>10</Y>
@@ -126,8 +126,8 @@
 			<Text>
 				<Id>1763623198137</Id>
 				<Name><![CDATA[text]]></Name>
-				<X>114</X>
-				<Y>51</Y>
+				<X>149</X>
+				<Y>56</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -152,8 +152,8 @@
 			<Text>
 				<Id>1763623435193</Id>
 				<Name><![CDATA[text1]]></Name>
-				<X>69</X>
-				<Y>51</Y>
+				<X>104</X>
+				<Y>56</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -177,8 +177,8 @@
 			<Text>
 				<Id>1763623481643</Id>
 				<Name><![CDATA[text2]]></Name>
-				<X>249</X>
-				<Y>51</Y>
+				<X>284</X>
+				<Y>56</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -203,8 +203,8 @@
 			<Text>
 				<Id>1763623481645</Id>
 				<Name><![CDATA[text3]]></Name>
-				<X>204</X>
-				<Y>51</Y>
+				<X>239</X>
+				<Y>56</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -228,8 +228,8 @@
 			<Text>
 				<Id>1763623538625</Id>
 				<Name><![CDATA[text4]]></Name>
-				<X>374</X>
-				<Y>51</Y>
+				<X>409</X>
+				<Y>56</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
@@ -254,8 +254,8 @@
 			<Text>
 				<Id>1763623538627</Id>
 				<Name><![CDATA[text5]]></Name>
-				<X>339</X>
-				<Y>51</Y>
+				<X>374</X>
+				<Y>56</Y>
 				<Label>
 					<X>0</X>
 					<Y>-10</Y>
