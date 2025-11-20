@@ -45,7 +45,7 @@
 			<Parameter>
 				<ParameterName>fireSpreadRate</ParameterName>
 				<ParameterValue Class="CodeValue">
-					<Code><![CDATA[0.5]]></Code>
+					<Code><![CDATA[0.75]]></Code>
 				</ParameterValue>
 			</Parameter>
 			<Parameter>
