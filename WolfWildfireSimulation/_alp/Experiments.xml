@@ -4,8 +4,8 @@
 		<Id>1761256096267</Id>
 		<Name><![CDATA[Simulation]]></Name>
 		<CommandLineArguments/>
-		<MaximumMemory>512</MaximumMemory>
-		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+		<MaximumMemory>4096</MaximumMemory>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
@@ -38,7 +38,20 @@
 				<Alignment>LEFT</Alignment>
 			</Text>
 		</Presentation>
-		<Parameters/>
+		<Parameters>
+			<Parameter>
+				<ParameterName>burningPeriod</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>fireSpreadRate</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[0.75]]></Code>
+				</ParameterValue>
+			</Parameter>
+			<Parameter>
+				<ParameterName>gridSize</ParameterName>
+			</Parameter>
+		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
 			<ExecutionMode>realTimeScaled</ExecutionMode>

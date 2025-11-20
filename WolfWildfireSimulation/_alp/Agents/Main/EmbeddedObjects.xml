@@ -3,8 +3,8 @@
 	<EmbeddedObject>
 		<Id>1761801523392</Id>
 		<Name><![CDATA[cells]]></Name>
-		<X>510</X>
-		<Y>10</Y>
+		<X>-80</X>
+		<Y>-20</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -27,7 +27,7 @@
 		<Parameters/>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
-			<Code><![CDATA[40*40]]></Code>
+			<Code><![CDATA[gridSize * gridSize]]></Code>
 		</Replication>
 		<CollectionType>ARRAY_LIST_BASED</CollectionType>
 		<InEnvironment>true</InEnvironment>
