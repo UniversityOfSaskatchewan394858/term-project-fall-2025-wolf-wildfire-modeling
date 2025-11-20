@@ -3,8 +3,8 @@
 	<Rectangle>
 		<Id>1761798013337</Id>
 		<Name><![CDATA[tile]]></Name>
-		<X>-5.5</X>
-		<Y>-5.5</Y>
+		<X>-5</X>
+		<Y>-5</Y>
 		<Label>
 			<X>10</X>
 			<Y>10</Y>
@@ -17,19 +17,14 @@
 		<Z>0</Z>
 		<ZHeight>10</ZHeight>
 		<LineWidth>1</LineWidth>
-		<LineColor>-16777216</LineColor>
+		<LineColor/>
 		<LineMaterial>null</LineMaterial>
 		<LineStyle>SOLID</LineStyle>
-		<Width>11</Width>
-		<Height>11</Height>
+		<Width>10</Width>
+		<Height>10</Height>
 		<Rotation>0.0</Rotation>
-		<FillColor>-16744448</FillColor>
-		<FillColorCode>/*
-(entrypoint.isStateActive(Unburnt)) ? Color.green
-  : (entrypoint.isStateActive(Burning)) ? Color.red
-  : Color.gray*/
-  
-colour</FillColorCode>
+		<FillColor>-14513374</FillColor>
+		<FillColorCode>colour</FillColorCode>
 		<FillMaterial>null</FillMaterial>
 	</Rectangle>
 </Presentation>

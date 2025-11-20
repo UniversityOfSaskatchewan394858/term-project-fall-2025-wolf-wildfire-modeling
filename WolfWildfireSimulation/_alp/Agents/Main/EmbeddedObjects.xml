@@ -3,7 +3,7 @@
 	<EmbeddedObject>
 		<Id>1761801523392</Id>
 		<Name><![CDATA[cells]]></Name>
-		<X>510</X>
+		<X>-70</X>
 		<Y>10</Y>
 		<Label>
 			<X>10</X>
@@ -24,17 +24,10 @@
 				<ItemName>1761586380075</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
-		<Parameters>
-			<Parameter>
-				<Name><![CDATA[burningPeriod]]></Name>
-			</Parameter>
-			<Parameter>
-				<Name><![CDATA[fireSpreadRate]]></Name>
-			</Parameter>
-		</Parameters>
+		<Parameters/>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
-			<Code><![CDATA[40*40]]></Code>
+			<Code><![CDATA[gridSize * gridSize]]></Code>
 		</Replication>
 		<CollectionType>ARRAY_LIST_BASED</CollectionType>
 		<InEnvironment>true</InEnvironment>

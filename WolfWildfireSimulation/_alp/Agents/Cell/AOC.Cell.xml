@@ -2,7 +2,6 @@
 <ActiveObjectClass>
 	<Id>1761586380070</Id>
 	<Name><![CDATA[Cell]]></Name>
-	<Import><![CDATA[import java.awt.Color;]]></Import>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1761586380075</Id>
@@ -109,8 +108,8 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>colour = green;</EntryAction>
-				<FillColor>-16744448</FillColor>
+				<EntryAction>colour = forestGreen;</EntryAction>
+				<FillColor>-14513374</FillColor>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -143,8 +142,8 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>colour = gray;</EntryAction>
-				<FillColor>-3308225</FillColor>
+				<EntryAction>colour = new Color(166, 129, 91);</EntryAction>
+				<FillColor>-5865125</FillColor>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
@@ -228,7 +227,7 @@
 			<IconOffset>30.0</IconOffset>
 			<Properties Source="1761586514385" Target="1761586519238" Trigger="timeout">
 				<Timeout Class="CodeUnitValue">
-					<Code><![CDATA[burnTime]]></Code>
+					<Code><![CDATA[get_Main().burningPeriod]]></Code>
 					<Unit Class="TimeUnits">DAY</Unit>
 				</Timeout>
 				<Condition>true</Condition>
@@ -300,7 +299,7 @@
 				</Timeout>
 				<Condition>true</Condition>
 				<Rate Class="CodeUnitValue">
-					<Code><![CDATA[fireSpreadRate]]></Code>
+					<Code><![CDATA[get_Main().fireSpreadRate]]></Code>
 					<Unit Class="RateUnits">PER_DAY</Unit>
 				</Rate>
 				<MessageType>Object</MessageType>
