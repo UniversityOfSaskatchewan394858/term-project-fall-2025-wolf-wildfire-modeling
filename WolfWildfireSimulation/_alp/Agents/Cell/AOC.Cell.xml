@@ -99,7 +99,7 @@
 			<Id>1761586506374</Id>
 			<Name><![CDATA[Unburnt]]></Name>
 			<X>110</X>
-			<Y>80</Y>
+			<Y>200</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -118,7 +118,7 @@ colour = forestGreen;</EntryAction>
 			<Id>1761586514385</Id>
 			<Name><![CDATA[Burning]]></Name>
 			<X>290</X>
-			<Y>80</Y>
+			<Y>200</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -137,7 +137,7 @@ colour = orangeRed;</EntryAction>
 			<Id>1761586519238</Id>
 			<Name><![CDATA[Burnt]]></Name>
 			<X>490</X>
-			<Y>80</Y>
+			<Y>200</Y>
 			<Label>
 				<X>10</X>
 				<Y>10</Y>
@@ -154,12 +154,12 @@ colour = new Color(166, 129, 91);</EntryAction>
 		</StatechartElement>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
 			<Id>1761586562453</Id>
-			<Name><![CDATA[Ignite]]></Name>
+			<Name><![CDATA[Spread]]></Name>
 			<X>210</X>
-			<Y>100</Y>
+			<Y>220</Y>
 			<Label>
-				<X>5</X>
-				<Y>10</Y>
+				<X>15</X>
+				<Y>15</Y>
 			</Label>
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
@@ -170,19 +170,11 @@ colour = new Color(166, 129, 91);</EntryAction>
 					<Y>0</Y>
 				</Point>
 				<Point>
-					<X>31</X>
-					<Y>0</Y>
-				</Point>
-				<Point>
-					<X>55</X>
-					<Y>0</Y>
-				</Point>
-				<Point>
 					<X>80</X>
 					<Y>0</Y>
 				</Point>
 			</Points>
-			<IconOffset>20.0</IconOffset>
+			<IconOffset>40.0</IconOffset>
 			<Properties Source="1761586506374" Target="1761586514385" Trigger="message">
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[0.6 * count(
@@ -199,8 +191,8 @@ colour = new Color(166, 129, 91);</EntryAction>
 				</Rate>
 				<MessageType>Object</MessageType>
 				<DefaultTransition>true</DefaultTransition>
-				<FilterType>unconditionally</FilterType>
-				<EqualsExpression>"text"</EqualsExpression>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>"Spread"</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
 			</Properties>
 		</StatechartElement>
@@ -208,7 +200,7 @@ colour = new Color(166, 129, 91);</EntryAction>
 			<Id>1761586573011</Id>
 			<Name><![CDATA[Burning_Burnt]]></Name>
 			<X>390</X>
-			<Y>100</Y>
+			<Y>220</Y>
 			<Label>
 				<X>10</X>
 				<Y>-15</Y>
@@ -252,7 +244,7 @@ colour = new Color(166, 129, 91);</EntryAction>
 			<Id>1761804757554</Id>
 			<Name><![CDATA[entrypoint]]></Name>
 			<X>20</X>
-			<Y>100</Y>
+			<Y>220</Y>
 			<Label>
 				<X>10</X>
 				<Y>5</Y>
@@ -277,8 +269,8 @@ colour = new Color(166, 129, 91);</EntryAction>
                      ParentStateId="1761586514385">
 			<Id>1761854440234</Id>
 			<Name><![CDATA[Neighbor_Burning]]></Name>
-			<X>360</X>
-			<Y>110</Y>
+			<X>380</X>
+			<Y>230</Y>
 			<Label>
 				<X>10</X>
 				<Y>0</Y>
@@ -298,7 +290,9 @@ colour = new Color(166, 129, 91);</EntryAction>
 			</Points>
 			<IconOffset>10.0</IconOffset>
 			<Properties Source="1761586514385" Target="1761586514385" Trigger="rate">
-				<Action>send("Ignite", ALL_NEIGHBORS);</Action>
+				<Action>int direction = Math.round(Math.random() * 8);
+
+send("Spread", this.getAgentNextToMe(EAST));</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">HOUR</Unit>
@@ -306,6 +300,103 @@ colour = new Color(166, 129, 91);</EntryAction>
 				<Condition>true</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[get_Main().fireSpreadRate]]></Code>
+					<Unit Class="RateUnits">PER_DAY</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1763676019769</Id>
+			<Name><![CDATA[initalFire]]></Name>
+			<X>160</X>
+			<Y>200</Y>
+			<Label>
+				<X>65</X>
+				<Y>-45</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>-30</Y>
+				</Point>
+				<Point>
+					<X>140</X>
+					<Y>-30</Y>
+				</Point>
+				<Point>
+					<X>140</X>
+					<Y>0</Y>
+				</Point>
+			</Points>
+			<IconOffset>120.0</IconOffset>
+			<Properties Source="1761586506374" Target="1761586514385" Trigger="message">
+				<Action>temperature = 1000</Action>
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">DAY</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_DAY</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>"Ignite"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1763677489752</Id>
+			<Name><![CDATA[heatIgnition]]></Name>
+			<X>160</X>
+			<Y>230</Y>
+			<Label>
+				<X>45</X>
+				<Y>45</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>30</Y>
+				</Point>
+				<Point>
+					<X>140</X>
+					<Y>30</Y>
+				</Point>
+				<Point>
+					<X>140</X>
+					<Y>0</Y>
+				</Point>
+			</Points>
+			<IconOffset>110.0</IconOffset>
+			<Properties Source="1761586506374" Target="1761586514385" Trigger="condition">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">DAY</Unit>
+				</Timeout>
+				<Condition>temperature &gt; 250</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_DAY</Unit>
 				</Rate>
 				<MessageType>Object</MessageType>

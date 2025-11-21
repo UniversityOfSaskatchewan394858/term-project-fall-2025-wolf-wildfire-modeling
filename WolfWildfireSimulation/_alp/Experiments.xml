@@ -44,12 +44,18 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>fireSpreadRate</ParameterName>
-				<ParameterValue Class="CodeValue">
-					<Code><![CDATA[0.75]]></Code>
-				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>gridSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseTemperature</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windDirection</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windSpeed</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
