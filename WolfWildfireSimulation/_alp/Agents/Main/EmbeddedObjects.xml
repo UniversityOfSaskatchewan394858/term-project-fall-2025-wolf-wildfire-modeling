@@ -28,6 +28,9 @@
 			<Parameter>
 				<Name><![CDATA[elevation]]></Name>
 			</Parameter>
+			<Parameter>
+				<Name><![CDATA[ignitingCell]]></Name>
+			</Parameter>
 		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">

@@ -3,8 +3,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1761850831766</Id>
 		<Name><![CDATA[colour]]></Name>
-		<X>-80</X>
-		<Y>40</Y>
+		<X>-230</X>
+		<Y>-230</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -25,8 +25,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1763781951085</Id>
 		<Name><![CDATA[vegetation]]></Name>
-		<X>-80</X>
-		<Y>70</Y>
+		<X>-230</X>
+		<Y>-200</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -41,11 +41,68 @@
 			<Type><![CDATA[double]]></Type>
 		</Properties>
 	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1763784203951</Id>
+		<Name><![CDATA[fuelLevel]]></Name>
+		<X>-230</X>
+		<Y>-170</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1763785631918</Id>
+		<Name><![CDATA[burningNeighbourCount]]></Name>
+		<X>-230</X>
+		<Y>-140</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1763786068124</Id>
+		<Name><![CDATA[burntNeighbourCount]]></Name>
+		<X>-230</X>
+		<Y>-110</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+		</Properties>
+	</Variable>
 	<Variable Class="Parameter">
 		<Id>1763780465371</Id>
 		<Name><![CDATA[elevation]]></Name>
-		<X>-190</X>
-		<Y>40</Y>
+		<X>-340</X>
+		<Y>-230</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -59,6 +116,31 @@
 			<SdArray>false</SdArray>
 			<ParameterEditor>
 				<Id>1763780465369</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1763784352652</Id>
+		<Name><![CDATA[ignitingCell]]></Name>
+		<X>-340</X>
+		<Y>-200</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[Agent]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<ParameterEditor>
+				<Id>1763784352650</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
 				<MinSliderValue>0</MinSliderValue>
 				<MaxSliderValue>100</MaxSliderValue>

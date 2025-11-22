@@ -25,6 +25,10 @@ for (Cell c : cells) {
 
 	
 	c.vegetation = Math.random();
+	
+	// initilaizing fuelLevel with arbitrary equation
+	c.fuelLevel = c.vegetation * 10;
+	
 	i++;
   }
   
