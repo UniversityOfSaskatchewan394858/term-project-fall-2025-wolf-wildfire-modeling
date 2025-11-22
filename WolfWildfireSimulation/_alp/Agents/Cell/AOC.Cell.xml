@@ -129,7 +129,7 @@
 				<EntryAction>get_Main().nBurning++;
 colour = orangeRed;</EntryAction>
 				<ExitAction>get_Main().nBurning--;</ExitAction>
-				<FillColor>-47872</FillColor>
+				<FillColor>-16825088</FillColor>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
