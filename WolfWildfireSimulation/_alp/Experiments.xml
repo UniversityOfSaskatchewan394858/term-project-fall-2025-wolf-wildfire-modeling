@@ -41,6 +41,9 @@
 		<Parameters>
 			<Parameter>
 				<ParameterName>burningPeriod</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[3]]></Code>
+				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>fireSpreadRate</ParameterName>
