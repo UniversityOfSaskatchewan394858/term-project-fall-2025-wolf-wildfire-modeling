@@ -108,8 +108,7 @@
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
-				<EntryAction>get_Main().nUnburnt++;
-colour = forestGreen;</EntryAction>
+				<EntryAction>get_Main().nUnburnt++;</EntryAction>
 				<ExitAction>get_Main().nUnburnt--;</ExitAction>
 				<FillColor>-14513374</FillColor>
 			</Properties>
