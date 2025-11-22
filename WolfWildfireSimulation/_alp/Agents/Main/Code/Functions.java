@@ -18,13 +18,16 @@ for (Cell c : cells) {
 
 	// cell is water or land depending on elevation
 	// will be changed to reflect + or - with real data
-	if (i % 2 == 0){
-	c.colour = new Color(0, colourValue, 0);
+	if (i % 6 != 0){
+		c.colour = new Color(0, colourValue, 0);
 	}
-	else{c.colour = new Color(0, 0, colourValue);}
-
+	else{
+		c.colour = new Color(0, 0, colourValue);
+		c.elevation = -c.elevation;}
 	
+	System.out.println("elevation: " + c.elevation);
 	c.vegetation = Math.random();
+	
 	
 	// initilaizing fuelLevel with arbitrary equation
 	c.fuelLevel = c.vegetation * 10;
