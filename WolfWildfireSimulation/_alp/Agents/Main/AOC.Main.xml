@@ -2,7 +2,9 @@
 <ActiveObjectClass>
 	<Id>1761256096259</Id>
 	<Name><![CDATA[Main]]></Name>
-	<StartupCode><![CDATA[deliverToRandomAgentInside( "Ignite" );]]></StartupCode>
+	<Import><![CDATA[import java.lang.Math; ]]></Import>
+	<StartupCode><![CDATA[setInitialCellProperties();
+deliverToRandomAgentInside( "Ignite" );]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1761256096264</Id>
@@ -95,6 +97,7 @@
 	<CurrentLevel>1761256096265</CurrentLevel>
 	<ConnectionsId>1761256096260</ConnectionsId>
 	<Variables xmlns:al="http://anylogic.com"/>
+	<Functions xmlns:al="http://anylogic.com"/>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1761256096260</Id>
