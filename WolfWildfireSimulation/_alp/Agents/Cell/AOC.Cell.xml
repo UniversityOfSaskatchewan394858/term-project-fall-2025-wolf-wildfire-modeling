@@ -168,6 +168,7 @@ send("BurntNeighbour", ALL_NEIGHBORS);</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
+				<EntryAction>get_Main().nUnburnable++;</EntryAction>
 				<FillColor>-14774017</FillColor>
 			</Properties>
 		</StatechartElement>
@@ -218,10 +219,8 @@ send("BurntNeighbour", ALL_NEIGHBORS);</EntryAction>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1761586506374" Target="1761586514385" Trigger="message">
 				<Timeout Class="CodeUnitValue">
-					<Code><![CDATA[0.6 * count(
-  getNeighbors(),
-  a -> ((Cell)a).entrypoint.isStateActive(((Cell)a).Burning)
-)
+					<Code><![CDATA[0.6 * count(getNeighbors(), a -> ((Cell) a).entrypoint
+		.isStateActive(((Cell) a).Burning))
 ]]></Code>
 					<Unit Class="TimeUnits">HOUR</Unit>
 				</Timeout>
@@ -382,7 +381,7 @@ send("BurntNeighbour", ALL_NEIGHBORS);</EntryAction>
 					<Unit Class="RateUnits">PER_DAY</Unit>
 				</Rate>
 				<MessageType>Object</MessageType>
-				<DefaultTransition>false</DefaultTransition>
+				<DefaultTransition>true</DefaultTransition>
 				<FilterType>unconditionally</FilterType>
 				<EqualsExpression>"text"</EqualsExpression>
 				<SatisfiesExpression>true</SatisfiesExpression>
@@ -407,7 +406,7 @@ send("BurntNeighbour", ALL_NEIGHBORS);</EntryAction>
 				</Point>
 				<Point>
 					<X>30</X>
-					<Y>-25</Y>
+					<Y>-30</Y>
 				</Point>
 			</Points>
 			<IconOffset>20.0</IconOffset>
@@ -416,7 +415,7 @@ send("BurntNeighbour", ALL_NEIGHBORS);</EntryAction>
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="TimeUnits">DAY</Unit>
 				</Timeout>
-				<Condition>elevation &lt; 0</Condition>
+				<Condition>elevation &lt;= 0</Condition>
 				<Rate Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>
 					<Unit Class="RateUnits">PER_DAY</Unit>
@@ -442,15 +441,15 @@ send("BurntNeighbour", ALL_NEIGHBORS);</EntryAction>
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
-			<OnReceive>if (msg == "Ignite"){
+			<OnReceive>if (msg == "Ignite") {
 	ignitingCell = sender;
 }
 
-if(msg == "BurningNeighbour"){
+if (msg == "BurningNeighbour") {
 	burningNeighbourCount++;
 }
 
-if(msg == "BurntNeighbour"){
+if (msg == "BurntNeighbour") {
 	burningNeighbourCount--;
 	burntNeighbourCount++;
 }</OnReceive>

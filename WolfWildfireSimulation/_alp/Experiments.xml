@@ -42,7 +42,7 @@
 			<Parameter>
 				<ParameterName>burningPeriod</ParameterName>
 				<ParameterValue Class="CodeValue">
-					<Code><![CDATA[3]]></Code>
+					<Code><![CDATA[5]]></Code>
 				</ParameterValue>
 			</Parameter>
 			<Parameter>
