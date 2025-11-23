@@ -1,7 +1,6 @@
 import org.geotools.gce.geotiff.GeoTiffReader;
 import java.io.File;
 import org.geotools.referencing.crs.DefaultGeographicCRS;
-//import com.mongodb.client.model.geojson.CoordinateReferenceSystem;
 import org.geotools.coverage.grid.GridGeometry2D;
 import net.opengis.gml311.DirectPositionListType;
 import java.io.File;
@@ -17,10 +16,17 @@ import org.geotools.api.referencing.crs.CoordinateReferenceSystem;
  * DataAccessorAndFormatter
  */	
 public class DataAccessorAndFormatter implements Serializable {
-	public double dat = 0.0;
-	
 	private Raster raster;
 	private int[] pixelData;
+	
+	private Raster waterRaster;
+	private int[] waterPixelData;
+	
+	private Raster woodRaster;
+	private int[] woodPixelData;
+	
+	private Raster sSoilRaster;
+	private int[] sSoilPixelData;
 	
 	private int width;
 	private int height;
@@ -30,7 +36,10 @@ public class DataAccessorAndFormatter implements Serializable {
     public DataAccessorAndFormatter() {
     	// Define the path to your GeoTIFF file within the AnyLogic model's resources
     	File file = new File("./sample.tif");
-
+    	File waterFile = new File("./WaterTiff4.tif");
+    	File woodFile = new File("./WoodTiff.tif");
+    	File ss_soilFile = new File("./SaturatedSoil.tif");
+    	
     	try {
     	    // Create a GeoTiffReader
     	    GeoTiffReader reader = new GeoTiffReader(file);
@@ -42,11 +51,6 @@ public class DataAccessorAndFormatter implements Serializable {
     	    CoordinateReferenceSystem crs = coverage.getCoordinateReferenceSystem();
     	    // Example: get the raster data
     	    raster = coverage.getRenderedImage().getData();
-
-    	    // Example: Get pixel value at a specific coordinate (e.g., lat=X, lon=Y)
-    	    // This is more complex, involving coordinate transformation. The example below 
-    	    // focuses on basic raster access. For coordinate to pixel conversion, you 
-    	    // would use the coverage's MathTransform.
     	    
     	    // Example: access pixel data directly
     	    width = raster.getWidth();
@@ -55,11 +59,32 @@ public class DataAccessorAndFormatter implements Serializable {
 
     	    // Loop through pixels or access a specific one
     	    // For example, reading the value at pixel (x, y) = (100, 100)
-    	    raster.getPixel(100, 100, pixelData);
-    	    System.out.println("Pixel value at (100, 100): " + pixelData[0]);
-    	    dat = pixelData[0];
+    	    //raster.getPixel(100, 100, pixelData);
+    	    //System.out.println("Pixel value at (100, 100): " + pixelData[0]);
     	    // Close the reader
     	    reader.dispose();
+    	    
+    	    reader = new GeoTiffReader(waterFile);
+    	    coverage = reader.read(null);
+    	    crs = coverage.getCoordinateReferenceSystem();
+    	    waterRaster = coverage.getRenderedImage().getData();
+    	    waterPixelData = new int[waterRaster.getNumBands()];
+    	    reader.dispose();
+    	    
+    	    reader = new GeoTiffReader(woodFile);
+    	    coverage = reader.read(null);
+    	    crs = coverage.getCoordinateReferenceSystem();
+    	    woodRaster = coverage.getRenderedImage().getData();
+    	    woodPixelData = new int[woodRaster.getNumBands()];
+    	    reader.dispose();
+    	    
+    	    reader = new GeoTiffReader(ss_soilFile);
+    	    coverage = reader.read(null);
+    	    crs = coverage.getCoordinateReferenceSystem();
+    	    sSoilRaster = coverage.getRenderedImage().getData();
+    	    sSoilPixelData = new int[sSoilRaster.getNumBands()];
+    	    reader.dispose();
+    	    
 
     	} catch (Exception e) {
     	    e.printStackTrace();
@@ -78,16 +103,17 @@ public class DataAccessorAndFormatter implements Serializable {
     }
     public double getPixelDataAtPosition(double x, double y) {
     	raster.getPixel(clamp((int)x,0,width),clamp((int)y,0,height),pixelData);
-    	System.out.printf("Pixel value at (%.2f, %.2f): " + pixelData[0]+"\n",x,y);
     	return pixelData[0];
     }
     
     public Color getPixelColourAtPosition(double x, double y) {
-    	raster.getPixel(clamp((int)x,0,width-1),clamp((int)y,0,height-1),pixelData);
+    	waterRaster.getPixel(clamp((int)x,0,width-1),clamp((int)y,0,height-1),waterPixelData);
+    	woodRaster.getPixel(clamp((int)x,0,width-1),clamp((int)y,0,height-1),woodPixelData);
+    	sSoilRaster.getPixel(clamp((int)x,0,width-1),clamp((int)y,0,height-1),sSoilPixelData);
 
-    	return new Color(clamp((int)pixelData[2]*255/2500,0,255),
-    			clamp((int)pixelData[1]*255/2500,0,255),
-    			clamp((int)pixelData[0]*255/2500,0,255));
+    	return new Color(clamp((int)sSoilPixelData[0],0,255),
+    			clamp((int)woodPixelData[0],0,255),
+    			clamp((int)waterPixelData[0],0,255));
     }
 	@Override
 	public String toString() {

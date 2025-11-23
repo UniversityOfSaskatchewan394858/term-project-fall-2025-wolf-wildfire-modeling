@@ -158,11 +158,7 @@
 				<Alignment>LEFT</Alignment>
 			</Text>
 		</Presentation>
-		<Parameters>
-			<Parameter>
-				<ParameterName>Tiff</ParameterName>
-			</Parameter>
-		</Parameters>
+		<Parameters/>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
