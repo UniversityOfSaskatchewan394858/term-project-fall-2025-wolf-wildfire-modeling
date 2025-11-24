@@ -57,11 +57,30 @@
 			<Type><![CDATA[double]]></Type>
 		</Properties>
 	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1763956972222</Id>
+		<Name><![CDATA[nCharred]]></Name>
+		<X>-110</X>
+		<Y>500</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>false</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+		</Properties>
+	</Variable>
 	<Variable Class="Parameter">
 		<Id>1763617143166</Id>
 		<Name><![CDATA[fuelConsumptionRate]]></Name>
-		<X>-280</X>
-		<Y>40</Y>
+		<X>-130</X>
+		<Y>70</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -74,7 +93,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.01]]></Code>
+				<Code><![CDATA[0.0005 * Math.pow(60, 2) //  kg/(s⋅m^2) * hr]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1763617143164</Id>
@@ -102,7 +121,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[100]]></Code>
+				<Code><![CDATA[100 // cells]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1763618658770</Id>
@@ -114,37 +133,9 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1763676733743</Id>
-		<Name><![CDATA[baseTemperature]]></Name>
-		<X>-130</X>
-		<Y>70</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[20]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763676733741</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
 		<Id>1763677663995</Id>
 		<Name><![CDATA[windDirection]]></Name>
-		<X>-420</X>
+		<X>-260</X>
 		<Y>100</Y>
 		<Label>
 			<X>10</X>
@@ -172,8 +163,8 @@
 	<Variable Class="Parameter">
 		<Id>1763678141277</Id>
 		<Name><![CDATA[windSpeed]]></Name>
-		<X>-420</X>
-		<Y>130</Y>
+		<X>-260</X>
+		<Y>70</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -186,7 +177,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[60]]></Code>
+				<Code><![CDATA[20000 // m / hr]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1763678141275</Id>
@@ -200,8 +191,8 @@
 	<Variable Class="Parameter">
 		<Id>1763678755328</Id>
 		<Name><![CDATA[windPower]]></Name>
-		<X>-420</X>
-		<Y>160</Y>
+		<X>-260</X>
+		<Y>40</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -214,7 +205,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.02]]></Code>
+				<Code><![CDATA[0.002]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1763678755326</Id>
@@ -226,38 +217,9 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1763761004927</Id>
-		<Name><![CDATA[ignitionTemperature]]></Name>
-		<X>-280</X>
-		<Y>100</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[250]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763761004925</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
 		<Id>1763763922162</Id>
 		<Name><![CDATA[airbornIgnitionPower]]></Name>
-		<X>-420</X>
+		<X>-400</X>
 		<Y>40</Y>
 		<Label>
 			<X>10</X>
@@ -286,7 +248,7 @@
 	<Variable Class="Parameter">
 		<Id>1763763940346</Id>
 		<Name><![CDATA[airbornIgnitionRate]]></Name>
-		<X>-420</X>
+		<X>-400</X>
 		<Y>70</Y>
 		<Label>
 			<X>10</X>
@@ -313,38 +275,10 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1763765063734</Id>
-		<Name><![CDATA[saturationTemperature]]></Name>
-		<X>-280</X>
-		<Y>130</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[1000]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763765063732</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
 		<Id>1763767190378</Id>
 		<Name><![CDATA[minFuel]]></Name>
-		<X>-420</X>
-		<Y>190</Y>
+		<X>-130</X>
+		<Y>160</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -358,7 +292,7 @@
 			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.1]]></Code>
+				<Code><![CDATA[0.1 // kg]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1763767190376</Id>
@@ -370,9 +304,66 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1763768970865</Id>
-		<Name><![CDATA[heatFromCombustion]]></Name>
-		<X>-280</X>
+		<Id>1763926779510</Id>
+		<Name><![CDATA[cellWidth]]></Name>
+		<X>-130</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[2000 // m]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1763926779508</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1763930788668</Id>
+		<Name><![CDATA[baseFuelAmount]]></Name>
+		<X>-260</X>
+		<Y>130</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[100 // kg]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1763930788666</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1763930982158</Id>
+		<Name><![CDATA[baseFuelSufaceArea]]></Name>
+		<X>-260</X>
 		<Y>160</Y>
 		<Label>
 			<X>10</X>
@@ -384,13 +375,13 @@
 		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[18000000]]></Code>
+				<Code><![CDATA[// acts as the average ratio between SA and V
+200 // m^2]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
-				<Id>1763768970863</Id>
+				<Id>1763930982156</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
 				<MinSliderValue>0</MinSliderValue>
 				<MaxSliderValue>100</MaxSliderValue>
@@ -399,68 +390,9 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1763769068710</Id>
-		<Name><![CDATA[woodConductivity]]></Name>
-		<X>-550</X>
-		<Y>40</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[//0.2 * 50 
-100 //tempvalue while ignoring area]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763769068708</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763776430919</Id>
-		<Name><![CDATA[directionalWeighting]]></Name>
-		<X>-130</X>
-		<Y>100</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[boolean]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[true]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763776430917</Id>
-				<EditorContolType>CHECK_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763777958456</Id>
-		<Name><![CDATA[heatCapacity]]></Name>
-		<X>-280</X>
+		<Id>1763932514144</Id>
+		<Name><![CDATA[baseFuelDensity]]></Name>
+		<X>-260</X>
 		<Y>190</Y>
 		<Label>
 			<X>10</X>
@@ -472,13 +404,12 @@
 		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 			<Type><![CDATA[double]]></Type>
 			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[15000]]></Code>
+				<Code><![CDATA[500 // kg / m^3]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
-				<Id>1763777958454</Id>
+				<Id>1763932514142</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
 				<MinSliderValue>0</MinSliderValue>
 				<MaxSliderValue>100</MaxSliderValue>
@@ -487,41 +418,12 @@
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
-		<Id>1763779261531</Id>
-		<Name><![CDATA[edgeHeatSink]]></Name>
+		<Id>1763936556151</Id>
+		<Name><![CDATA[fireSpreadRate]]></Name>
 		<X>-130</X>
 		<Y>130</Y>
 		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[boolean]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[true]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763779261529</Id>
-				<EditorContolType>CHECK_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763792325539</Id>
-		<Name><![CDATA[fuelTemperatureCurve]]></Name>
-		<X>-280</X>
-		<Y>70</Y>
-		<Label>
-			<X>10</X>
+			<X>12</X>
 			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
@@ -532,125 +434,10 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[1]]></Code>
+				<Code><![CDATA[180 // m / hr]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
-				<Id>1763792325537</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763831117050</Id>
-		<Name><![CDATA[combustionLossToRadiation]]></Name>
-		<X>-280</X>
-		<Y>220</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.3]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763831117048</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763926163981</Id>
-		<Name><![CDATA[soilConductivity]]></Name>
-		<X>-550</X>
-		<Y>70</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[5]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763926163979</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763926183269</Id>
-		<Name><![CDATA[airConductivity]]></Name>
-		<X>-550</X>
-		<Y>100</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.025]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763926183267</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763926779510</Id>
-		<Name><![CDATA[cellWidth]]></Name>
-		<X>-130</X>
-		<Y>160</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
-			<UnitType>NONE</UnitType>
-			<UnitOfValue Class="RateUnits">PER_SECOND</UnitOfValue>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[50]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763926779508</Id>
+				<Id>1763936556149</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
 				<MinSliderValue>0</MinSliderValue>
 				<MaxSliderValue>100</MaxSliderValue>

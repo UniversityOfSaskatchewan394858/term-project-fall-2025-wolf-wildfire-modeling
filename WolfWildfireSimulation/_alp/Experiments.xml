@@ -46,9 +46,6 @@
 				<ParameterName>gridSize</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseTemperature</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>windDirection</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -58,49 +55,28 @@
 				<ParameterName>windPower</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>ignitionTemperature</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>airbornIgnitionPower</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>airbornIgnitionRate</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>saturationTemperature</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>minFuel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>heatFromCombustion</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>woodConductivity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>directionalWeighting</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>heatCapacity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>edgeHeatSink</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fuelTemperatureCurve</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>combustionLossToRadiation</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>soilConductivity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airConductivity</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>cellWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelAmount</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelSufaceArea</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelDensity</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>fireSpreadRate</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>

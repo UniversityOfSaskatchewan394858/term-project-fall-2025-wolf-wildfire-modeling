@@ -120,7 +120,7 @@
 				<Width>10</Width>
 				<Height>8</Height>
 				<Rotation>0.0</Rotation>
-				<FillColor>-5865125</FillColor>
+				<FillColor>-3308225</FillColor>
 				<FillMaterial>null</FillMaterial>
 			</Rectangle>
 			<Text>
@@ -228,7 +228,7 @@
 			<Text>
 				<Id>1763623538625</Id>
 				<Name><![CDATA[text4]]></Name>
-				<X>409</X>
+				<X>528</X>
 				<Y>56</Y>
 				<Label>
 					<X>0</X>
@@ -268,7 +268,84 @@
 				<Z>0</Z>
 				<Rotation>0.0</Rotation>
 				<Color>-16777216</Color>
+				<Text><![CDATA[Charred:]]></Text>
+				<Font>
+					<Name><![CDATA[SansSerif]]></Name>
+					<Size>10</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+			<Rectangle>
+				<Id>1763956330027</Id>
+				<Name><![CDATA[rectangle5]]></Name>
+				<X>479</X>
+				<Y>58</Y>
+				<Label>
+					<X>10</X>
+					<Y>10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<ZHeight>10</ZHeight>
+				<LineWidth>1</LineWidth>
+				<LineColor/>
+				<LineMaterial>null</LineMaterial>
+				<LineStyle>SOLID</LineStyle>
+				<Width>10</Width>
+				<Height>8</Height>
+				<Rotation>0.0</Rotation>
+				<FillColor>-16777216</FillColor>
+				<FillMaterial>null</FillMaterial>
+			</Rectangle>
+			<Text>
+				<Id>1763957012748</Id>
+				<Name><![CDATA[text6]]></Name>
+				<X>494</X>
+				<Y>56</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-16777216</Color>
 				<Text><![CDATA[Burnt:]]></Text>
+				<Font>
+					<Name><![CDATA[SansSerif]]></Name>
+					<Size>10</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+			<Text>
+				<Id>1763957018991</Id>
+				<Name><![CDATA[text7]]></Name>
+				<X>419</X>
+				<Y>56</Y>
+				<Label>
+					<X>0</X>
+					<Y>-10</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-16777216</Color>
+				<Text/>
+				<TextCode>format(nCharred)</TextCode>
 				<Font>
 					<Name><![CDATA[SansSerif]]></Name>
 					<Size>10</Size>
@@ -402,8 +479,18 @@
 			<Title>Burnt</Title>
 			<Id>1763621562366</Id>
 			<Expression>my_dataset2</Expression>
-			<Color>-5865125</Color>
+			<Color>-16777216</Color>
 			<Expression2>this.nBurnt</Expression2>
+			<Expression2Flag>true</Expression2Flag>
+			<PointStyle>NONE</PointStyle>
+			<LineWidth>1.0</LineWidth>
+		</DatasetExpression>
+		<DatasetExpression>
+			<Title>Charred</Title>
+			<Id>1763957056205</Id>
+			<Expression>my_dataset3</Expression>
+			<Color>-3308225</Color>
+			<Expression2>this.nCharred</Expression2>
 			<Expression2Flag>true</Expression2Flag>
 			<PointStyle>NONE</PointStyle>
 			<LineWidth>1.0</LineWidth>

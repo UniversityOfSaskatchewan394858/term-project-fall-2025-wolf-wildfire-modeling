@@ -2,7 +2,7 @@
 <ActiveObjectClass>
 	<Id>1761256096259</Id>
 	<Name><![CDATA[Main]]></Name>
-	<StartupCode><![CDATA[deliverToRandomAgentInside( "Ignite" );]]></StartupCode>
+	<StartupCode><![CDATA[deliverToRandomAgentInside( "init" );]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1761256096264</Id>
