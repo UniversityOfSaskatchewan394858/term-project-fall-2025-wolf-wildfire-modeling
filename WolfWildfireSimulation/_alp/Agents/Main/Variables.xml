@@ -149,7 +149,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[Math.toRadians(90)]]></Code>
+				<Code><![CDATA[Math.toRadians(90) // east]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1763677663993</Id>
