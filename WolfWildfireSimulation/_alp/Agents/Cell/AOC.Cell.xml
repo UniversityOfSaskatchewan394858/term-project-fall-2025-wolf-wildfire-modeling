@@ -363,6 +363,10 @@ get_Main().nUnburnt--;</Action>
 
 burnRadius += get_Main().fireSpreadRate * fuelRatio;
 
+// this compares every set point on the square and 
+// compares them to the fire circle representation, 
+// and if they are int the fire circle use fuel and 
+// set neighbor cells on fire.
 pointsWithFuel = 8;
 for (int i = 0; i &lt; 8; i++) {
 	if (remainingFuel[i] &lt; get_Main().minFuel) {
@@ -373,19 +377,27 @@ for (int i = 0; i &lt; 8; i++) {
 	if (!isInRadius(i)) continue;
 	
 	isBurning = true;
+
 	double surfaceArea = remainingFuel[i] * (get_Main().baseFuelSufaceArea / get_Main().baseFuelDensity);
 
 	double fuelConsumption = get_Main().fuelConsumptionRate * surfaceArea;
 	remainingFuel[i] -= fuelConsumption;
 	
+	// this ensures the point in a valid cell burns while
+	// not telling the invalid neighbor
 	if (Neighbors[i] != null &amp;&amp; !Neighbors[i].isCellBurning) {
 		igniteNeighbor(i);
 	}
 }
 
+// moves the circle based on wind direction and speed
+// to simulate slowing/quickening spread.
 firePointX += (get_Main().windSpeed * get_Main().windPower) * Math.sin(get_Main().windDirection);
 firePointY += (get_Main().windSpeed * get_Main().windPower) * Math.cos(get_Main().windDirection);
 
+// setting isCellBurning to false while all fuel is
+// expent will send it to charred before it can go
+// to burnt hence the != 0
 if (pointsWithFuel != 0) { 
 	isCellBurning = isBurning;
 }</Action>

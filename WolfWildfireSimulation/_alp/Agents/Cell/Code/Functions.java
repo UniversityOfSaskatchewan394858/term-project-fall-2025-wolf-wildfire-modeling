@@ -1,5 +1,9 @@
 boolean isInRadius(int i)
 {/*ALCODESTART::1763947322041*/
+/*
+this whole script is simply to check whether or 
+not the current point is within the circle.
+*/
 double CellX = 0;
 double CellY = 0;
 
@@ -44,6 +48,11 @@ return vector < Math.pow(burnRadius, 2);
 
 boolean igniteNeighbor(int i)
 {/*ALCODESTART::1763950567108*/
+/*
+this whole script is simply to tell the neighbors
+that they are going to burn, and which point in
+the neighbor should act as the source of the fire.
+*/
 double CellX = 0;
 double CellY = 0;
 
