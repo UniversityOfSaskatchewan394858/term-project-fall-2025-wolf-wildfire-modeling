@@ -226,6 +226,7 @@ colour = InitialValue.getPixelColourAtPosition(x*1000/size, y*1000/size);</Entry
 			</Points>
 			<IconOffset>20.0</IconOffset>
 			<Properties Source="1761586506374" Target="1761586514385" Trigger="message">
+				<Action>m</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[0.6 * count(
   getNeighbors(),
@@ -239,7 +240,7 @@ colour = InitialValue.getPixelColourAtPosition(x*1000/size, y*1000/size);</Entry
 					<Code><![CDATA[4.0 * burningNeighbours()]]></Code>
 					<Unit Class="RateUnits">PER_HOUR</Unit>
 				</Rate>
-				<MessageType>Object</MessageType>
+				<MessageType>Integer</MessageType>
 				<DefaultTransition>true</DefaultTransition>
 				<FilterType>unconditionally</FilterType>
 				<EqualsExpression>"text"</EqualsExpression>
