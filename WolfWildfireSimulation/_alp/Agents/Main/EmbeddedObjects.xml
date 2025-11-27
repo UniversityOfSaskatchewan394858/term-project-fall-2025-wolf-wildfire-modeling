@@ -24,7 +24,14 @@
 				<ItemName>1761586380075</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
-		<Parameters/>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[InitialValue]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[size]]></Name>
+			</Parameter>
+		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
 			<Code><![CDATA[gridSize * gridSize]]></Code>
