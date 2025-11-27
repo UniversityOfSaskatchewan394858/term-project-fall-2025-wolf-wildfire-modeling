@@ -743,23 +743,6 @@ get_Main().nCharred--;</Action>
 				<ClassName>Main</ClassName>
 			</ActiveObjectClass>
 		</ContainerLink>
-		<ContainerLink>
-			<Id>1763185327069</Id>
-			<Name><![CDATA[main_tiff]]></Name>
-			<X>150</X>
-			<Y>-20</Y>
-			<Label>
-				<X>10</X>
-				<Y>0</Y>
-			</Label>
-			<PublicFlag>false</PublicFlag>
-			<PresentationFlag>true</PresentationFlag>
-			<ShowLabel>true</ShowLabel>
-			<ActiveObjectClass>
-				<PackageName>wolfwildfiresimulation</PackageName>
-				<ClassName>Main_tiff</ClassName>
-			</ActiveObjectClass>
-		</ContainerLink>
 	</ContainerLinks>
 	<Presentation>
 		<Level>
