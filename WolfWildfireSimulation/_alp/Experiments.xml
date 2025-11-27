@@ -78,6 +78,9 @@
 			<Parameter>
 				<ParameterName>fireSpreadRate</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>globalDataAccessor</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>

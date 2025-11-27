@@ -245,52 +245,54 @@
 			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="StockVariable">
-		<Id>1763189103151</Id>
-		<Name><![CDATA[x]]></Name>
-		<X>420</X>
-		<Y>160</Y>
+	<Variable Class="PlainVariable">
+		<Id>1764282490629</Id>
+		<Name><![CDATA[posX]]></Name>
+		<X>400</X>
+		<Y>20</Y>
 		<Label>
-			<X>0</X>
-			<Y>-20</Y>
+			<X>10</X>
+			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties Array="false">
-			<EquationStyle>classic</EquationStyle>
-			<Width>20</Width>
-			<Height>20</Height>
-			<InitialValue>(double)(((int)getId()-1)%size)
-//getX()*500/size</InitialValue>
-			<Color>-4073239</Color>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[(double)(((int)getId()-1)%get_Main().gridSize)]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="StockVariable">
-		<Id>1763189127541</Id>
-		<Name><![CDATA[y]]></Name>
-		<X>500</X>
-		<Y>170</Y>
+	<Variable Class="PlainVariable">
+		<Id>1764282497414</Id>
+		<Name><![CDATA[posY]]></Name>
+		<X>400</X>
+		<Y>40</Y>
 		<Label>
-			<X>0</X>
-			<Y>-20</Y>
+			<X>10</X>
+			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties Array="false">
-			<EquationStyle>classic</EquationStyle>
-			<Width>20</Width>
-			<Height>20</Height>
-			<InitialValue>(getId()-1)/size
-//getY()*500/size</InitialValue>
-			<Color>-4073239</Color>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[(getId()-1)/get_Main().gridSize]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763186663010</Id>
-		<Name><![CDATA[InitialValue]]></Name>
-		<X>540</X>
+	<Variable Class="PlainVariable">
+		<Id>1764282662785</Id>
+		<Name><![CDATA[DataAccess]]></Name>
+		<X>400</X>
 		<Y>60</Y>
 		<Label>
 			<X>10</X>
@@ -299,45 +301,14 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
 			<Type><![CDATA[DataAccessorAndFormatter]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<ParameterEditor>
-				<Id>1763186663008</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
-		</Properties>
-	</Variable>
-	<Variable Class="Parameter">
-		<Id>1763238384175</Id>
-		<Name><![CDATA[size]]></Name>
-		<X>450</X>
-		<Y>60</Y>
-		<Label>
-			<X>10</X>
-			<Y>0</Y>
-		</Label>
-		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
-		<ShowLabel>true</ShowLabel>
-		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[int]]></Type>
-			<UnitType>NONE</UnitType>
-			<SdArray>false</SdArray>
-			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[get_Main().gridSize]]></Code>
-			</DefaultValue>
-			<ParameterEditor>
-				<Id>1763238384173</Id>
-				<EditorContolType>TEXT_BOX</EditorContolType>
-				<MinSliderValue>0</MinSliderValue>
-				<MaxSliderValue>100</MaxSliderValue>
-				<DelimeterType>NO_DELIMETER</DelimeterType>
-			</ParameterEditor>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[get_Main().globalDataAccessor]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
 </Variables>
