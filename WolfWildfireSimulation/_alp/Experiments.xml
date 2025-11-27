@@ -81,6 +81,9 @@
 			<Parameter>
 				<ParameterName>globalDataAccessor</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelMoisture</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
