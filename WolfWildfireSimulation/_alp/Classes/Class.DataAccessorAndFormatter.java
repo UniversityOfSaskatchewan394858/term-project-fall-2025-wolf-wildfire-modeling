@@ -16,9 +16,6 @@ import org.geotools.api.referencing.crs.CoordinateReferenceSystem;
  * DataAccessorAndFormatter
  */	
 public class DataAccessorAndFormatter implements Serializable {
-	private Raster raster;
-	private int[] pixelData;
-	
 	private Raster waterRaster;
 	private int[] waterPixelData;
 	
@@ -35,34 +32,24 @@ public class DataAccessorAndFormatter implements Serializable {
      */
     public DataAccessorAndFormatter() {
     	// Define the path to your GeoTIFF file within the AnyLogic model's resources
-    	File file = new File("./sample.tif");
     	File waterFile = new File("./WaterTiff4.tif");
     	File woodFile = new File("./WoodTiff.tif");
     	File ss_soilFile = new File("./SaturatedSoil.tif");
     	
     	try {
     	    // Create a GeoTiffReader
-    	    GeoTiffReader reader = new GeoTiffReader(file);
+    	    GeoTiffReader reader;
 
     	    // Read the coverage (the image data and georeferencing information)
-    	    GridCoverage2D coverage = reader.read(null);
+    	    GridCoverage2D coverage;
     	    
     	    // You can now access metadata, raster data, and coordinate information
-    	    CoordinateReferenceSystem crs = coverage.getCoordinateReferenceSystem();
-    	    // Example: get the raster data
-    	    raster = coverage.getRenderedImage().getData();
-    	    
-    	    // Example: access pixel data directly
-    	    width = raster.getWidth();
-    	    height = raster.getHeight();
-    	    pixelData = new int[raster.getNumBands()];
+    	    CoordinateReferenceSystem crs;
 
     	    // Loop through pixels or access a specific one
     	    // For example, reading the value at pixel (x, y) = (100, 100)
     	    //raster.getPixel(100, 100, pixelData);
     	    //System.out.println("Pixel value at (100, 100): " + pixelData[0]);
-    	    // Close the reader
-    	    reader.dispose();
     	    
     	    reader = new GeoTiffReader(waterFile);
     	    coverage = reader.read(null);
@@ -75,6 +62,10 @@ public class DataAccessorAndFormatter implements Serializable {
     	    coverage = reader.read(null);
     	    crs = coverage.getCoordinateReferenceSystem();
     	    woodRaster = coverage.getRenderedImage().getData();
+    	    
+    	    width = woodRaster.getWidth()-1;
+    	    height = woodRaster.getHeight()-1;
+    	    
     	    woodPixelData = new int[woodRaster.getNumBands()];
     	    reader.dispose();
     	    
@@ -97,23 +88,72 @@ public class DataAccessorAndFormatter implements Serializable {
     	return Math.max(min, Math.min(max, val));
     }
     
-    public double getPixelDataAtPosition(int x, int y) {
-    	raster.getPixel(clamp(x,0,width),clamp(y,0,height),pixelData);
-    	return pixelData[0];
+    public float averageAroundPosition(Raster raster, int width_in, int height_in, int x, int y) {
+    	int[] pixelData = {0};
+    	float sum = 0;
+    	float total = 0;
+    	//raster.getPixel(clamp((int)x,0,width),clamp((int)y,0,height),waterPixelData);
+    	//return waterPixelData[0];/*
+    	for(int x_offset = -width_in/2; x_offset < width_in/2; x_offset++) {
+        	for(int y_offset = -height_in/2; y_offset < height_in/2; y_offset++) {
+        		raster.getPixel(clamp(x+x_offset,0,width),clamp(y+y_offset,0,height), pixelData);
+        		
+        		if(pixelData[0] != 0) {
+        			sum++;
+        		}
+        		total++;
+        	}
+    	}
+    	return sum/total;
     }
-    public double getPixelDataAtPosition(double x, double y) {
-    	raster.getPixel(clamp((int)x,0,width),clamp((int)y,0,height),pixelData);
-    	return pixelData[0];
+    
+    public boolean isWaterAtPosition(double x, double y) {
+    	x = x * Math.min(width,height);
+    	y = y * Math.min(width,height);
+    	float p = averageAroundPosition(waterRaster,10,10,
+    			clamp((int)x,0,width),clamp((int)y,0,height));
+    		
+    	return p > 0.5;
+    	//waterRaster.getPixel(clamp((int)x,0,width),clamp((int)y,0,height),waterPixelData);
+    	//return waterPixelData[0] != 0;
+    }
+    
+    public boolean isWoodedAtPosition(double x, double y) {
+    	x = x * Math.min(width,height);
+    	y = y * Math.min(width,height);
+    	float p = averageAroundPosition(woodRaster,10,10,
+    			clamp((int)x,0,width),clamp((int)y,0,height));
+    	return p > 0.5;
+    	//woodRaster.getPixel(clamp((int)x,0,width),clamp((int)y,0,height),woodPixelData);
+    	//return woodPixelData[0] != 0;
+    }
+    
+    public boolean isSSoilAtPosition(double x, double y) {
+    	x = x * Math.min(width,height);
+    	y = y * Math.min(width,height);
+    	float p = averageAroundPosition(sSoilRaster,10,10,
+    			clamp((int)x,0,width),clamp((int)y,0,height));
+    	return p > 0.25;
+    	//sSoilRaster.getPixel(clamp((int)x,0,width),clamp((int)y,0,height),sSoilPixelData);
+    	//return sSoilPixelData[0] != 0;
     }
     
     public Color getPixelColourAtPosition(double x, double y) {
-    	waterRaster.getPixel(clamp((int)x,0,width-1),clamp((int)y,0,height-1),waterPixelData);
-    	woodRaster.getPixel(clamp((int)x,0,width-1),clamp((int)y,0,height-1),woodPixelData);
-    	sSoilRaster.getPixel(clamp((int)x,0,width-1),clamp((int)y,0,height-1),sSoilPixelData);
+    	int r = 0;
+    	int g = 0;
+    	int b = 0;
+    	if(isWaterAtPosition(x,y)) {
+    		b=255;
+    	}
+    	else if(isWoodedAtPosition(x,y)) {
+    		g = 255;
+    	}
+    	if(isSSoilAtPosition(x,y)) {
+    		r = 150;
+    		g = 75;
+    	}
 
-    	return new Color(clamp((int)sSoilPixelData[0],0,255),
-    			clamp((int)woodPixelData[0],0,255),
-    			clamp((int)waterPixelData[0],0,255));
+    	return new Color(r,g,b);
     }
 	@Override
 	public String toString() {

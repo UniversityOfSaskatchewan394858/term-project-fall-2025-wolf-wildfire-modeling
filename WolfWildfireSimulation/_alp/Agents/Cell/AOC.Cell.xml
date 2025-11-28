@@ -125,7 +125,9 @@
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>get_Main().nBurning++;
-colour = orangeRed;</EntryAction>
+if(fuelRatio!=0){
+	colour = orangeRed;
+}</EntryAction>
 				<ExitAction>get_Main().nBurning--;</ExitAction>
 				<FillColor>-47872</FillColor>
 			</Properties>
@@ -144,7 +146,7 @@ colour = orangeRed;</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>get_Main().nBurnt++;
-colour = black;</EntryAction>
+colour = gray;</EntryAction>
 				<ExitAction>get_Main().nBurnt--;</ExitAction>
 				<FillColor>-8355712</FillColor>
 			</Properties>
@@ -284,7 +286,8 @@ Neighbors[5] = (Cell) this.getAgentNextToMe(SOUTH);
 Neighbors[6] = (Cell) this.getAgentNextToMe(SOUTHWEST);
 Neighbors[7] = (Cell) this.getAgentNextToMe(WEST);
 
-get_Main().nUnburnt++;</Action>
+get_Main().nUnburnt++;
+SetUpData();</Action>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
@@ -489,7 +492,11 @@ if (pointsWithFuel != 0) {
 			<IconOffset>40.0</IconOffset>
 			<Properties Source="1761586514385" Target="1764098178222" Trigger="condition">
 				<Action>burnRadius = 0.1;
-colour = peru;
+if(fuelRatio!=0.0){
+	colour = peru;
+}else{
+	colour = blue;
+}
 get_Main().nCharred++;</Action>
 				<Timeout Class="CodeUnitValue">
 					<Code><![CDATA[1]]></Code>

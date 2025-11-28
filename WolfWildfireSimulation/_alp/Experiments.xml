@@ -64,9 +64,6 @@
 				<ParameterName>minFuel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>cellWidth</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>baseFuelAmount</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -83,6 +80,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>baseFuelMoisture</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealHeight</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>initialiseWithData</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
