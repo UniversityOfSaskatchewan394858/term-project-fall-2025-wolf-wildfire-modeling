@@ -153,7 +153,8 @@ get_Main().baseFuelMoisture]]></Code>
 			<Type><![CDATA[double]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[// origin of fire X
-0;]]></Code>
+//0;
+get_Main().cellWidth / 2;]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>
@@ -176,7 +177,8 @@ get_Main().baseFuelMoisture]]></Code>
 			<Type><![CDATA[double]]></Type>
 			<InitialValue Class="CodeValue">
 				<Code><![CDATA[// origin of fire Y
-0;]]></Code>
+//0;
+get_Main().cellWidth / 2;]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>
@@ -242,7 +244,7 @@ get_Main().baseFuelMoisture]]></Code>
               StaticVariable="false">
 			<Type><![CDATA[double]]></Type>
 			<InitialValue Class="CodeValue">
-				<Code><![CDATA[(double)(((int)getId()-1)%get_Main().gridSize)]]></Code>
+				<Code><![CDATA[(double)(((int)getId()-1)%get_Main().gridSize)/get_Main().gridSize]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>
@@ -264,7 +266,7 @@ get_Main().baseFuelMoisture]]></Code>
               StaticVariable="false">
 			<Type><![CDATA[double]]></Type>
 			<InitialValue Class="CodeValue">
-				<Code><![CDATA[(getId()-1)/get_Main().gridSize]]></Code>
+				<Code><![CDATA[(((double)getId()-1)/get_Main().gridSize)/get_Main().gridSize]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>

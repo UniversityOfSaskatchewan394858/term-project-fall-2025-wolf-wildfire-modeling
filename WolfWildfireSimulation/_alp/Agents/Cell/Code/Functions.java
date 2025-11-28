@@ -94,3 +94,18 @@ Neighbors[i].firePointY	= -CellY * get_Main().cellWidth / 2;
 send("Ignite", Neighbors[i]);
 /*ALCODEEND*/}
 
+double SetUpData()
+{/*ALCODESTART::1764300295738*/
+if(!get_Main().initialiseWithData){
+	return;
+}
+
+colour = DataAccess.getPixelColourAtPosition(posX, posY);
+if(DataAccess.isWaterAtPosition(posX,posY)){
+	fuelRatio = 0.0;
+}
+else if(DataAccess.isSSoilAtPosition(posX,posY)){
+	localMoisture += 0.5;
+}
+/*ALCODEEND*/}
+
