@@ -32,9 +32,9 @@ public class DataAccessorAndFormatter implements Serializable {
      */
     public DataAccessorAndFormatter() {
     	// Define the path to your GeoTIFF file within the AnyLogic model's resources
-    	File waterFile = new File("./WaterTiff4.tif");
-    	File woodFile = new File("./WoodTiff.tif");
-    	File ss_soilFile = new File("./SaturatedSoil.tif");
+    	File waterFile = new File("./input_data/WaterTiff4.tif");
+    	File woodFile = new File("./input_data/WoodTiff.tif");
+    	File ss_soilFile = new File("./input_data/SaturatedSoil.tif");
     	
     	try {
     	    // Create a GeoTiffReader

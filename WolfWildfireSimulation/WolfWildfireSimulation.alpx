@@ -5,7 +5,7 @@
                    AlpVersion="8.9.6">
 	<Model>
 		<Id>1761256096255</Id>
-		<Name><![CDATA[WolfWildfireSimulation]]></Name>
+		<Name><![CDATA[WolfWildfireSimulation1]]></Name>
 		<EngineVersion>6</EngineVersion>
 		<JavaPackageName><![CDATA[wolfwildfiresimulation]]></JavaPackageName>
 		<ModelTimeUnit>Day</ModelTimeUnit>

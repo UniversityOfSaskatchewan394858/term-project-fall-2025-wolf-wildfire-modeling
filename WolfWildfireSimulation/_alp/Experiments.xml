@@ -3,6 +3,7 @@
 	<SimulationExperiment ActiveObjectClassId="1761256096259">
 		<Id>1761256096267</Id>
 		<Name><![CDATA[Simulation]]></Name>
+		<Import><![CDATA[import java.net.*;]]></Import>
 		<CommandLineArguments/>
 		<MaximumMemory>4096</MaximumMemory>
 		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
@@ -90,6 +91,27 @@
 			<Parameter>
 				<ParameterName>initialiseWithData</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>cellWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateDataCurrDay</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>stationClimateID</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>stationClimateProvTerr</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateDataYear</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateDataURLStr</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateDataURL</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -100,11 +122,11 @@
 			<RealTimeScale>1.0</RealTimeScale>
 		</PresentationProperties>
 		<ModelTimeProperties>
-			<StopOption>Never</StopOption>
-			<InitialDate>1761177600000</InitialDate>
+			<StopOption>Stop at specified date</StopOption>
+			<InitialDate>1747612800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
-			<FinalDate>1763856000000</FinalDate>
-			<FinalTime>100.0</FinalTime>
+			<FinalDate>1755302400000</FinalDate>
+			<FinalTime>89.0</FinalTime>
 		</ModelTimeProperties>
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>

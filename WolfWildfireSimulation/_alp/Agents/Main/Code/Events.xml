@@ -19,7 +19,7 @@
 			</Timeout>
 			<Rate Class="CodeUnitValue">
 				<Code><![CDATA[1]]></Code>
-				<Unit Class="RateUnits">PER_WEEK</Unit>
+				<Unit Class="RateUnits">PER_HOUR</Unit>
 			</Rate>
 			<Id>1764294797747</Id>
 			<OccurrenceAtTime>true</OccurrenceAtTime>
