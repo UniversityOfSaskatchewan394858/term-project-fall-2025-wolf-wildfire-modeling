@@ -59,6 +59,10 @@
 				<Id>1763165759578</Id>
 				<Name><![CDATA[DataAccessorAndFormatter]]></Name>
 			</JavaClass>
+			<JavaClass>
+				<Id>1764654069561</Id>
+				<Name><![CDATA[ClimateRecord]]></Name>
+			</JavaClass>
 		</JavaClasses>
 		<RequiredLibraryReference>
 			<LibraryName>com.anylogic.libraries.modules.markup_descriptors</LibraryName>

@@ -146,9 +146,9 @@ if(fuelRatio!=0){
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>get_Main().nBurnt++;
-colour = gray;</EntryAction>
+colour = new Color(95, 88, 77);</EntryAction>
 				<ExitAction>get_Main().nBurnt--;</ExitAction>
-				<FillColor>-8355712</FillColor>
+				<FillColor>-10528691</FillColor>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="State" ParentState="ROOT_NODE">
@@ -164,7 +164,8 @@ colour = gray;</EntryAction>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="110" Height="80">
-				<FillColor>-3308225</FillColor>
+				<EntryAction>colour = darkGoldenRod;</EntryAction>
+				<FillColor>-4684277</FillColor>
 			</Properties>
 		</StatechartElement>
 		<StatechartElement Class="Transition"
