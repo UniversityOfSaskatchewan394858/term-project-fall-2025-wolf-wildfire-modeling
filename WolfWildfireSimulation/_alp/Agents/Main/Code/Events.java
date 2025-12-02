@@ -1,8 +1,12 @@
-void event()
+void hourlyClimateUpdate()
 {/*ALCODESTART::1764294797749*/
-windDirection = Math.toRadians(Math.random()*360);
-
-climateDataCurrDay = climateData.readLine();
-
+ClimateRecord currClimate = climateRecordList.get(climateRecordIdx);
+temperature = currClimate.temp;
+windSpeed = currClimate.windSpd; 
+windDirection = Math.toRadians(currClimate.windDir * 10);
+climateRecordIdx++;
+System.out.println(temperature);
+System.out.println(windSpeed);
+System.out.println(windDirection);
 /*ALCODEEND*/}
 

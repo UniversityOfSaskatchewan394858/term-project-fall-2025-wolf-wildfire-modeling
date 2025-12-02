@@ -2,15 +2,15 @@
 <Events>
 	<Event>
 		<Id>1764294797749</Id>
-		<Name><![CDATA[event]]></Name>
-		<X>-295</X>
-		<Y>325</Y>
+		<Name><![CDATA[hourlyClimateUpdate]]></Name>
+		<X>-150</X>
+		<Y>440</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
+		<PresentationFlag>false</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
 		<Properties TriggerType="rate" Mode="occuresOnce">
 			<Timeout Class="CodeUnitValue">

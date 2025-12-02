@@ -2,23 +2,29 @@
 <ActiveObjectClass>
 	<Id>1761256096259</Id>
 	<Name><![CDATA[Main]]></Name>
-	<Import><![CDATA[import java.net.*;]]></Import>
+	<Import><![CDATA[import java.net.*;
+import java.io.*;
+import java.util.*;]]></Import>
 	<StartupCode><![CDATA[deliverToRandomAgentInside( "init" );
 
-// use date to get to line in the data
-Date currDate = date(); 
+getClimateData();
 
-Calendar calendar = Calendar.getInstance();
-calendar.setTime(currDate);
+// get index for climate data list
+Date currDate = date();
 
-int dayOfYear = calendar.get(Calendar.DAY_OF_YEAR);
+Calendar cal = Calendar.getInstance();
+cal.setTime(currDate);
 
-for (int i = 1; i <= (dayOfYear-1)*24 + 1; i++){
-	climateDataCurrDay = climateData.readLine();
-}
+int dayOfYear = cal.get(Calendar.DAY_OF_YEAR);
+int hourOfDay = cal.get(Calendar.HOUR_OF_DAY);
+climateRecordIdx = (dayOfYear - 1) * 24 + hourOfDay - 1;
 
-System.out.println(dayOfYear);
-]]></StartupCode>
+// initialize climate data
+ClimateRecord currClimate = climateRecordList.get(climateRecordIdx);
+temperature = currClimate.temp;
+windSpeed = currClimate.windSpd; 
+windDirection = Math.toRadians(currClimate.windDir * 10);
+climateRecordIdx++;]]></StartupCode>
 	<Generic>false</Generic>
 	<GenericParameter>
 		<Id>1761256096264</Id>
@@ -112,27 +118,7 @@ System.out.println(dayOfYear);
 	<ConnectionsId>1761256096260</ConnectionsId>
 	<Variables xmlns:al="http://anylogic.com"/>
 	<Events xmlns:al="http://anylogic.com"/>
-	<Connectivity>
-		<TextFile>
-			<Id>1764472641854</Id>
-			<Name><![CDATA[climateData]]></Name>
-			<Description><![CDATA[https://dd.weather.gc.ca/today/climate/observations/hourly/csv/MB/climate_hourly_MB_5050970_2025_P1H.csv]]></Description>
-			<X>-310</X>
-			<Y>430</Y>
-			<Label>
-				<X>10</X>
-				<Y>0</Y>
-			</Label>
-			<PublicFlag>false</PublicFlag>
-			<PresentationFlag>true</PresentationFlag>
-			<ShowLabel>true</ShowLabel>
-			<FileType>URL</FileType>
-			<Url>https://dd.weather.gc.ca/today/climate/observations/hourly/csv/MB/climate_hourly_MB_5050919_2025_P1H.csv</Url>
-			<FileMode>READ</FileMode>
-			<CharsetName>null</CharsetName>
-			<Separators>,</Separators>
-		</TextFile>
-	</Connectivity>
+	<Functions xmlns:al="http://anylogic.com"/>
 	<AgentLinks>
 		<AgentLink>
 			<Id>1761256096260</Id>

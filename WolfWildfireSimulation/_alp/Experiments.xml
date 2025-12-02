@@ -3,7 +3,6 @@
 	<SimulationExperiment ActiveObjectClassId="1761256096259">
 		<Id>1761256096267</Id>
 		<Name><![CDATA[Simulation]]></Name>
-		<Import><![CDATA[import java.net.*;]]></Import>
 		<CommandLineArguments/>
 		<MaximumMemory>4096</MaximumMemory>
 		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
@@ -95,22 +94,13 @@
 				<ParameterName>cellWidth</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>climateDataCurrDay</ParameterName>
+				<ParameterName>temperature</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>stationClimateID</ParameterName>
+				<ParameterName>climateRecordList</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>stationClimateProvTerr</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>climateDataYear</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>climateDataURLStr</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>climateDataURL</ParameterName>
+				<ParameterName>climateRecordIdx</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
