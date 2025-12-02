@@ -44,7 +44,7 @@ try {
     br.close();
 } catch (Exception e) {
     e.printStackTrace();
-    System.out.println("Error reading climate data: " + e.getMessage())
+    System.out.println("Error reading climate data: " + e.getMessage());
 }
 /*ALCODEEND*/}
 
