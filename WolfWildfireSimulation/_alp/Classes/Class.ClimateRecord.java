@@ -4,6 +4,7 @@ public class ClimateRecord {
 	
 	public Double temp;
 	public Double relHumPercent;
+	public Double precip; // mm
 	public Double windDir; // 10s of deg
 	public Double windSpd; // km/h
 	public Double stnPress; // kPa
@@ -19,6 +20,7 @@ public class ClimateRecord {
 	
 	    temp = getDoubleData(c[10]);
 	    relHumPercent = getDoubleData(c[14]);
+	    precip = getDoubleData(c[16]);
 	    windDir = getDoubleData(c[18]);
 	    windSpd = getDoubleData(c[20]);
 	    stnPress = getDoubleData(c[24]);
