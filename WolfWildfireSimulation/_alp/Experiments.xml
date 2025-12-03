@@ -5,7 +5,7 @@
 		<Name><![CDATA[BaselineWithGeoData]]></Name>
 		<CommandLineArguments/>
 		<MaximumMemory>512</MaximumMemory>
-		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
@@ -112,8 +112,8 @@
 			<RealTimeScale>1.0</RealTimeScale>
 		</PresentationProperties>
 		<ModelTimeProperties>
-			<StopOption>Stop at specified date</StopOption>
-			<InitialDate>1747612800000</InitialDate>
+			<StopOption>Never</StopOption>
+			<InitialDate>1735689600000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1755302400000</FinalDate>
 			<FinalTime>89.0</FinalTime>
@@ -235,8 +235,8 @@
 			<RealTimeScale>1.0</RealTimeScale>
 		</PresentationProperties>
 		<ModelTimeProperties>
-			<StopOption>Stop at specified date</StopOption>
-			<InitialDate>1747612800000</InitialDate>
+			<StopOption>Never</StopOption>
+			<InitialDate>1735689600000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1755302400000</FinalDate>
 			<FinalTime>89.0</FinalTime>
