@@ -90,7 +90,7 @@
 	</Variable>
 	<Variable Class="PlainVariable">
 		<Id>1765046680519</Id>
-		<Name><![CDATA[variable]]></Name>
+		<Name><![CDATA[daysBurning]]></Name>
 		<X>-150</X>
 		<Y>380</Y>
 		<Label>
@@ -98,13 +98,16 @@
 			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
+		<PresentationFlag>false</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
 		<Properties SaveInSnapshot="true"
               Constant="false"
               AccessType="public"
               StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
+			<Type><![CDATA[int]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
