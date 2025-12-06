@@ -40,7 +40,7 @@
               StaticVariable="false">
 			<Type><![CDATA[double[]]]></Type>
 			<InitialValue Class="CodeValue">
-				<Code><![CDATA[{get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount}]]></Code>
+				<Code><![CDATA[{get_Main().baseFuelPerArea / 8, get_Main().baseFuelPerArea / 8, get_Main().baseFuelPerArea / 8, get_Main().baseFuelPerArea / 8, get_Main().baseFuelPerArea / 8, get_Main().baseFuelPerArea / 8, get_Main().baseFuelPerArea / 8, get_Main().baseFuelPerArea / 8}]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>

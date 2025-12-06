@@ -40,9 +40,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>fuelConsumptionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>gridSize</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -52,28 +49,13 @@
 				<ParameterName>windSpeed</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>windPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>minFuel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelAmount</ParameterName>
+				<ParameterName>baseFuelLoad</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelSufaceArea</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>baseFuelDensity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireSpreadRate</ParameterName>
+				<ParameterName>fuelConsumptionRate</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>globalDataAccessor</ParameterName>
@@ -109,7 +91,10 @@
 				<ParameterName>relativeHumidity</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
+				<ParameterName>areaPerCell</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerArea</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -169,9 +154,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>fuelConsumptionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>gridSize</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -181,28 +163,13 @@
 				<ParameterName>windSpeed</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>windPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>minFuel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelAmount</ParameterName>
+				<ParameterName>baseFuelLoad</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelSufaceArea</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>baseFuelDensity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireSpreadRate</ParameterName>
+				<ParameterName>fuelConsumptionRate</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>globalDataAccessor</ParameterName>
@@ -241,7 +208,10 @@
 				<ParameterName>relativeHumidity</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
+				<ParameterName>areaPerCell</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerArea</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -301,9 +271,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>fuelConsumptionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>gridSize</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -313,28 +280,13 @@
 				<ParameterName>windSpeed</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>windPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>minFuel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelAmount</ParameterName>
+				<ParameterName>baseFuelLoad</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelSufaceArea</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>baseFuelDensity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireSpreadRate</ParameterName>
+				<ParameterName>fuelConsumptionRate</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>globalDataAccessor</ParameterName>
@@ -373,7 +325,10 @@
 				<ParameterName>relativeHumidity</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
+				<ParameterName>areaPerCell</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerArea</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -433,12 +388,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>fuelConsumptionRate</ParameterName>
-				<ParameterValue Class="CodeValue">
-					<Code><![CDATA[0.0003 * Math.pow(60, 2) //  kg/(s⋅m^2) * hr]]></Code>
-				</ParameterValue>
-			</Parameter>
-			<Parameter>
 				<ParameterName>gridSize</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -448,28 +397,13 @@
 				<ParameterName>windSpeed</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>windPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>minFuel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelAmount</ParameterName>
+				<ParameterName>baseFuelLoad</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelSufaceArea</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>baseFuelDensity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireSpreadRate</ParameterName>
+				<ParameterName>fuelConsumptionRate</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>globalDataAccessor</ParameterName>
@@ -505,7 +439,10 @@
 				<ParameterName>relativeHumidity</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
+				<ParameterName>areaPerCell</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerArea</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -565,9 +502,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>fuelConsumptionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>gridSize</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -577,28 +511,13 @@
 				<ParameterName>windSpeed</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>windPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>minFuel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelAmount</ParameterName>
+				<ParameterName>baseFuelLoad</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelSufaceArea</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>baseFuelDensity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireSpreadRate</ParameterName>
+				<ParameterName>fuelConsumptionRate</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>globalDataAccessor</ParameterName>
@@ -637,7 +556,10 @@
 				<ParameterName>relativeHumidity</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
+				<ParameterName>areaPerCell</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerArea</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -697,12 +619,6 @@
 		</Presentation>
 		<Parameters>
 			<Parameter>
-				<ParameterName>fuelConsumptionRate</ParameterName>
-				<ParameterValue Class="CodeValue">
-					<Code><![CDATA[0.000005 * Math.pow(60, 2) //  kg/(s⋅m^2) * hr]]></Code>
-				</ParameterValue>
-			</Parameter>
-			<Parameter>
 				<ParameterName>gridSize</ParameterName>
 			</Parameter>
 			<Parameter>
@@ -712,28 +628,13 @@
 				<ParameterName>windSpeed</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>windPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionPower</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>airbornIgnitionRate</ParameterName>
-			</Parameter>
-			<Parameter>
 				<ParameterName>minFuel</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelAmount</ParameterName>
+				<ParameterName>baseFuelLoad</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>baseFuelSufaceArea</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>baseFuelDensity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireSpreadRate</ParameterName>
+				<ParameterName>fuelConsumptionRate</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>globalDataAccessor</ParameterName>
@@ -769,7 +670,10 @@
 				<ParameterName>relativeHumidity</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
+				<ParameterName>areaPerCell</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerArea</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
