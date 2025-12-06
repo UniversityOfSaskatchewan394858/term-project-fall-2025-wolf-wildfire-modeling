@@ -90,7 +90,7 @@
 	</Variable>
 	<Variable Class="PlainVariable">
 		<Id>1765046680519</Id>
-		<Name><![CDATA[variable]]></Name>
+		<Name><![CDATA[daysBurning]]></Name>
 		<X>-150</X>
 		<Y>380</Y>
 		<Label>
@@ -98,13 +98,16 @@
 			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
+		<PresentationFlag>false</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
 		<Properties SaveInSnapshot="true"
               Constant="false"
               AccessType="public"
               StaticVariable="false">
-			<Type><![CDATA[double]]></Type>
+			<Type><![CDATA[int]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</InitialValue>
 		</Properties>
 	</Variable>
 	<Variable Class="Parameter">
@@ -644,6 +647,9 @@
 	<Variable Class="Parameter">
 		<Id>1765007579305</Id>
 		<Name><![CDATA[droughtCode]]></Name>
+		<Description><![CDATA[The Drought Code is a component of the Canadian Forest Fire Weather Index (FWI) System. It is a numeric rating of the average moisture content of deep, compact organic layers. This code is a useful indicator of seasonal drought effects on forest fuels and the amount of smoldering in deep duff layers and large logs.
+https://cwfis.cfs.nrcan.gc.ca/maps/fw?type=dc&year=2025&month=05&day=19
+]]></Description>
 		<X>-390</X>
 		<Y>180</Y>
 		<Label>

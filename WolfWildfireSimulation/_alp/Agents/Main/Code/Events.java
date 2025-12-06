@@ -17,8 +17,21 @@ setFireSpreadRatePerCell();
 
 /*ALCODEEND*/}
 
-void event()
+void endSimulation()
 {/*ALCODESTART::1765046620965*/
 getEngine().finish()
+/*ALCODEEND*/}
+
+void dailyUpdate()
+{/*ALCODESTART::1765047775599*/
+daysSinceRain++;
+daysBurning++;
+
+// update burn time for each burning cells
+for (Cell c : cells) {
+	if (c.isCellBurning) {
+		c.durationOfBurn++;
+	}
+}
 /*ALCODEEND*/}
 

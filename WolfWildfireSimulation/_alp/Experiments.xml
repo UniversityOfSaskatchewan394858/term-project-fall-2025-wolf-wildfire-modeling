@@ -115,8 +115,8 @@
 			<StopOption>Never</StopOption>
 			<InitialDate>1747612800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
-			<FinalDate>1755302400000</FinalDate>
-			<FinalTime>89.0</FinalTime>
+			<FinalDate>1747785600000</FinalDate>
+			<FinalTime>2.0</FinalTime>
 		</ModelTimeProperties>
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>
