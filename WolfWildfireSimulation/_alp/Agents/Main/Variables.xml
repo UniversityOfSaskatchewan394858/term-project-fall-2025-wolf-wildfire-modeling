@@ -647,6 +647,9 @@
 	<Variable Class="Parameter">
 		<Id>1765007579305</Id>
 		<Name><![CDATA[droughtCode]]></Name>
+		<Description><![CDATA[The Drought Code is a component of the Canadian Forest Fire Weather Index (FWI) System. It is a numeric rating of the average moisture content of deep, compact organic layers. This code is a useful indicator of seasonal drought effects on forest fuels and the amount of smoldering in deep duff layers and large logs.
+https://cwfis.cfs.nrcan.gc.ca/maps/fw?type=dc&year=2025&month=05&day=19
+]]></Description>
 		<X>-390</X>
 		<Y>180</Y>
 		<Label>

@@ -112,7 +112,7 @@
 			<RealTimeScale>1.0</RealTimeScale>
 		</PresentationProperties>
 		<ModelTimeProperties>
-			<StopOption>Stop at specified date</StopOption>
+			<StopOption>Never</StopOption>
 			<InitialDate>1747612800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1747785600000</FinalDate>

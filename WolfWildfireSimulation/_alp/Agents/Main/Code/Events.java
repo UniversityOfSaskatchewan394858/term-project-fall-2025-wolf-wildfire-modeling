@@ -24,7 +24,14 @@ getEngine().finish()
 
 void dailyUpdate()
 {/*ALCODESTART::1765047775599*/
-daysBurning++;
 daysSinceRain++;
+daysBurning++;
+
+// update burn time for each burning cells
+for (Cell c : cells) {
+	if (c.isCellBurning) {
+		c.durationOfBurn++;
+	}
+}
 /*ALCODEEND*/}
 
