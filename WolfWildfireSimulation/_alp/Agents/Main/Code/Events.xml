@@ -3,8 +3,8 @@
 	<Event>
 		<Id>1764294797749</Id>
 		<Name><![CDATA[hourlyUpdate]]></Name>
-		<X>-160</X>
-		<Y>550</Y>
+		<X>-150</X>
+		<Y>570</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -33,6 +33,42 @@
 				<Unit Class="TimeUnits">DAY</Unit>
 			</RecurrenceCode>
 			<Condition>false</Condition>
+		</Properties>
+		<Action xmlns:al="http://anylogic.com"/>
+	</Event>
+	<Event>
+		<Id>1765046620965</Id>
+		<Name><![CDATA[event]]></Name>
+		<X>-150</X>
+		<Y>650</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties TriggerType="condition" Mode="occuresOnce">
+			<Timeout Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">DAY</Unit>
+			</Timeout>
+			<Rate Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="RateUnits">PER_DAY</Unit>
+			</Rate>
+			<Id>1765046620963</Id>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1765094400000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">DAY</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">DAY</Unit>
+			</RecurrenceCode>
+			<Condition>nBurning == 0</Condition>
 		</Properties>
 		<Action xmlns:al="http://anylogic.com"/>
 	</Event>

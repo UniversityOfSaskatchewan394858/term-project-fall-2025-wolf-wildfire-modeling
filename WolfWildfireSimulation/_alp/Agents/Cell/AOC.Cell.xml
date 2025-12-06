@@ -125,6 +125,7 @@
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="100" Height="30">
 				<EntryAction>get_Main().nBurning++;
+numOfIgnitions++;
 if(fuelRatio!=0){
 	colour = orangeRed;
 }
@@ -318,8 +319,6 @@ get_Main().nUnburnt--;</Action>
 			<IconOffset>10.0</IconOffset>
 			<Properties Source="1761586514385" Target="1761586514385" Trigger="timeout">
 				<Action>boolean isBurning = false;
-
-double radIncrease = 0;
 
 if (fuelRatio != 0.0) {
 	burnRadius += fireSpreadRate * 10;
@@ -536,6 +535,7 @@ get_Main().nCharred--;</Action>
 			<PublicFlag>false</PublicFlag>
 			<PresentationFlag>true</PresentationFlag>
 			<ShowLabel>true</ShowLabel>
+			<OnReceive>if (msg == "Ignite") ignititionSource.add((Cell) sender);</OnReceive>
 			<HandleReceiveInConnections>false</HandleReceiveInConnections>
 			<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
 			<AgentLinkBidirectional>true</AgentLinkBidirectional>

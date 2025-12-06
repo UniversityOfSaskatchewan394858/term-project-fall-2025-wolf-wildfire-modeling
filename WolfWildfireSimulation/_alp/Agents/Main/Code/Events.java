@@ -17,3 +17,8 @@ setFireSpreadRatePerCell();
 
 /*ALCODEEND*/}
 
+void event()
+{/*ALCODESTART::1765046620965*/
+getEngine().finish()
+/*ALCODEEND*/}
+
