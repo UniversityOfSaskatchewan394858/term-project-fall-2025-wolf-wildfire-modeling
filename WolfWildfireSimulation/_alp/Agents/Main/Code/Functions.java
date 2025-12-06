@@ -51,3 +51,21 @@ try {
 }
 /*ALCODEEND*/}
 
+double setFireSpreadRatePerCell()
+{/*ALCODESTART::1764993676759*/
+double droughtFactor = 600;
+double fireDangerExp = (temperature - relativeHumidity/30.0 + 0.0234 * windSpeed);
+fireDanger = 1.25 * droughtFactor * Math.pow(Math.E, fireDangerExp);
+
+for (Cell c : cells) {
+	double totalFuel = 0;
+	for (int i = 0; i < 8; i++) {
+		totalFuel += c.remainingFuel[i];
+	}
+	
+	double fuelPerArea = totalFuel * baseFuelSufaceArea / baseFuelDensity;
+	double fuelWeight = fuelPerArea * 10; // tonnes per hectare
+	c.fireSpreadRate = 0.00012 * fireDanger * fuelWeight;
+}
+/*ALCODEEND*/}
+
