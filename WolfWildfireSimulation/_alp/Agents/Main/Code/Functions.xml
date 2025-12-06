@@ -5,8 +5,8 @@
 		<ReturnType>double</ReturnType>
 		<Id>1764655608642</Id>
 		<Name><![CDATA[getClimateData]]></Name>
-		<X>-470</X>
-		<Y>490</Y>
+		<X>-460</X>
+		<Y>260</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -21,14 +21,14 @@
 		<ReturnType>double</ReturnType>
 		<Id>1764993676759</Id>
 		<Name><![CDATA[setFireSpreadRatePerCell]]></Name>
-		<X>-480</X>
-		<Y>550</Y>
+		<X>-460</X>
+		<Y>290</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
+		<PresentationFlag>false</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
 		<Body xmlns:al="http://anylogic.com"/>
 	</Function>

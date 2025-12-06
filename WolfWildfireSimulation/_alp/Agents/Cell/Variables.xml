@@ -40,7 +40,7 @@
               StaticVariable="false">
 			<Type><![CDATA[double[]]]></Type>
 			<InitialValue Class="CodeValue">
-				<Code><![CDATA[{get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount,get_Main().baseFuelAmount}]]></Code>
+				<Code><![CDATA[{get_Main().baseFuelPerCellPt, get_Main().baseFuelPerCellPt, get_Main().baseFuelPerCellPt, get_Main().baseFuelPerCellPt, get_Main().baseFuelPerCellPt, get_Main().baseFuelPerCellPt, get_Main().baseFuelPerCellPt, get_Main().baseFuelPerCellPt}]]></Code>
 			</InitialValue>
 		</Properties>
 	</Variable>
@@ -273,7 +273,7 @@ get_Main().cellWidth / 2;]]></Code>
 		<Id>1764994623893</Id>
 		<Name><![CDATA[fireSpreadRate]]></Name>
 		<X>170</X>
-		<Y>70</Y>
+		<Y>60</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

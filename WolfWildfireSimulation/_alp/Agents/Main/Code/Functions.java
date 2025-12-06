@@ -1,6 +1,5 @@
 double getClimateData()
 {/*ALCODESTART::1764655608642*/
-
 // information for climate data url
 String provTerr = "MB";
 String climateID = "5050919";
@@ -53,9 +52,8 @@ try {
 
 double setFireSpreadRatePerCell()
 {/*ALCODESTART::1764993676759*/
-double droughtFactor = 600;
-double fireDangerExp = (temperature - relativeHumidity/30.0 + 0.0234 * windSpeed);
-fireDanger = 1.25 * droughtFactor * Math.pow(Math.E, fireDangerExp);
+double fireDangerExp = (temperature - relativeHumidity)/30.0 + (0.0234 * windSpeed);
+double fireDanger = 1.25 * droughtCode * Math.pow(Math.E, fireDangerExp);
 
 for (Cell c : cells) {
 	double totalFuel = 0;
@@ -63,9 +61,9 @@ for (Cell c : cells) {
 		totalFuel += c.remainingFuel[i];
 	}
 	
-	double fuelPerArea = totalFuel * baseFuelSufaceArea / baseFuelDensity;
+	double fuelPerArea = totalFuel / cellArea;
 	double fuelWeight = fuelPerArea * 10; // tonnes per hectare
-	c.fireSpreadRate = 0.00012 * fireDanger * fuelWeight;
+	c.fireSpreadRate = 0.0012 * fireDanger * fuelWeight;
 }
 /*ALCODEEND*/}
 

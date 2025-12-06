@@ -23,7 +23,7 @@ temperature = currClimate.temp;
 windSpeed = currClimate.windSpd; 
 windDirection = Math.toRadians(currClimate.windDir * 10);
 precipitation = currClimate.precip;
-relativeHumidity = currClimate.relHumPercent;
+relativeHumidity = currClimate.relHumPercent / 100;
 climateRecordIdx++;
 
 setFireSpreadRatePerCell();
