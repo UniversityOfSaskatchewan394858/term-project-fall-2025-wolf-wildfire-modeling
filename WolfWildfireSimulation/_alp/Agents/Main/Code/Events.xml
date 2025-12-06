@@ -2,7 +2,7 @@
 <Events>
 	<Event>
 		<Id>1764294797749</Id>
-		<Name><![CDATA[hourlyUpdate]]></Name>
+		<Name><![CDATA[hourlyClimateUpdate]]></Name>
 		<X>-150</X>
 		<Y>440</Y>
 		<Label>

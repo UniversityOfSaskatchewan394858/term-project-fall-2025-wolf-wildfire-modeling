@@ -1,4 +1,4 @@
-void hourlyUpdate()
+void hourlyClimateUpdate()
 {/*ALCODESTART::1764294797749*/
 // reset index if end of data is reached
 if (climateRecordIdx >= climateRecordList.size()) climateRecordIdx = 0;
@@ -9,7 +9,7 @@ temperature = currClimate.temp;
 windSpeed = currClimate.windSpd; 
 windDirection = Math.toRadians(currClimate.windDir * 10);
 precipitation = currClimate.precip;
-relativeHumidity = currClimate.relHumPercent / 100;
+relativeHumidity = currClimate.relHumPercent;
 climateRecordIdx++;
 
 setFireSpreadRatePerCell();
