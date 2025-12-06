@@ -8,12 +8,7 @@ ClimateRecord currClimate = climateRecordList.get(climateRecordIdx);
 temperature = currClimate.temp;
 windSpeed = currClimate.windSpd; 
 windDirection = Math.toRadians(currClimate.windDir * 10);
-precipitation = currClimate.precip;
-relativeHumidity = currClimate.relHumPercent;
+
 climateRecordIdx++;
-
-setFireSpreadRatePerCell();
-
-
 /*ALCODEEND*/}
 

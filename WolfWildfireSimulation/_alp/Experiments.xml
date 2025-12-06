@@ -79,7 +79,7 @@
 				<ParameterName>globalDataAccessor</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>moisture</ParameterName>
+				<ParameterName>baseFuelMoisture</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>simulationRealWidth</ParameterName>
@@ -101,15 +101,6 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>climateRecordIdx</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>precipitation</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>relativeHumidity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -208,7 +199,7 @@
 				<ParameterName>globalDataAccessor</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>moisture</ParameterName>
+				<ParameterName>baseFuelMoisture</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>simulationRealWidth</ParameterName>
@@ -233,15 +224,6 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>climateRecordIdx</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>precipitation</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>relativeHumidity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -340,7 +322,7 @@
 				<ParameterName>globalDataAccessor</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>moisture</ParameterName>
+				<ParameterName>baseFuelMoisture</ParameterName>
 				<ParameterValue Class="CodeValue">
 					<Code><![CDATA[0.7 // %]]></Code>
 				</ParameterValue>
@@ -365,15 +347,6 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>climateRecordIdx</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>precipitation</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>relativeHumidity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -475,7 +448,7 @@
 				<ParameterName>globalDataAccessor</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>moisture</ParameterName>
+				<ParameterName>baseFuelMoisture</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>simulationRealWidth</ParameterName>
@@ -497,15 +470,6 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>climateRecordIdx</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>precipitation</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>relativeHumidity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -604,7 +568,7 @@
 				<ParameterName>globalDataAccessor</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>moisture</ParameterName>
+				<ParameterName>baseFuelMoisture</ParameterName>
 				<ParameterValue Class="CodeValue">
 					<Code><![CDATA[0.1 // %]]></Code>
 				</ParameterValue>
@@ -629,15 +593,6 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>climateRecordIdx</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>precipitation</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>relativeHumidity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -739,7 +694,7 @@
 				<ParameterName>globalDataAccessor</ParameterName>
 			</Parameter>
 			<Parameter>
-				<ParameterName>moisture</ParameterName>
+				<ParameterName>baseFuelMoisture</ParameterName>
 			</Parameter>
 			<Parameter>
 				<ParameterName>simulationRealWidth</ParameterName>
@@ -761,15 +716,6 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>climateRecordIdx</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>precipitation</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>relativeHumidity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fireDanger</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>

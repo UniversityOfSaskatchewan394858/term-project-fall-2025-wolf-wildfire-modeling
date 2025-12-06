@@ -127,8 +127,7 @@
 				<EntryAction>get_Main().nBurning++;
 if(fuelRatio!=0){
 	colour = orangeRed;
-}
-</EntryAction>
+}</EntryAction>
 				<ExitAction>get_Main().nBurning--;</ExitAction>
 				<FillColor>-47872</FillColor>
 			</Properties>
@@ -366,7 +365,7 @@ get_Main().nUnburnt--;</Action>
 			<Properties Source="1761586514385" Target="1761586514385" Trigger="timeout">
 				<Action>boolean isBurning = false;
 
-burnRadius += (1 - localMoisture) * fireSpreadRate * fuelRatio;
+burnRadius += (1 - localMoisture) * get_Main().fireSpreadRate * fuelRatio;
 
 // this compares every set point on the square and 
 // compares them to the fire circle representation, 
@@ -385,7 +384,7 @@ for (int i = 0; i &lt; 8; i++) {
 
 	double surfaceArea = remainingFuel[i] * (get_Main().baseFuelSufaceArea / get_Main().baseFuelDensity);
 
-	double fuelConsumption = (1 - localMoisture) * fuelRatio * surfaceArea;
+	double fuelConsumption = (1 - localMoisture) * fuelRatio * get_Main().fuelConsumptionRate * surfaceArea;
 	remainingFuel[i] -= fuelConsumption;
 	
 	// this ensures the point in a valid cell burns while
@@ -397,8 +396,8 @@ for (int i = 0; i &lt; 8; i++) {
 
 // moves the circle based on wind direction and speed
 // to simulate slowing/quickening spread.
-firePointX += get_Main().windSpeed * Math.sin(get_Main().windDirection);
-firePointY += get_Main().windSpeed * Math.cos(get_Main().windDirection);
+firePointX += (get_Main().windSpeed * get_Main().windPower) * Math.sin(get_Main().windDirection);
+firePointY += (get_Main().windSpeed * get_Main().windPower) * Math.cos(get_Main().windDirection);
 
 // setting isCellBurning to false while all fuel is
 // expent will send it to charred before it can go
