@@ -319,7 +319,11 @@ get_Main().nUnburnt--;</Action>
 			<Properties Source="1761586514385" Target="1761586514385" Trigger="timeout">
 				<Action>boolean isBurning = false;
 
-burnRadius += fireSpreadRate;
+double radIncrease = 0;
+
+if (fuelRatio != 0.0) {
+	burnRadius += fireSpreadRate * 10;
+} else {burnRadius = 0;}
 
 // this compares every set point on the square and 
 // compares them to the fire circle representation, 

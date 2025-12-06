@@ -3,8 +3,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1763621222407</Id>
 		<Name><![CDATA[nBurning]]></Name>
-		<X>-150</X>
-		<Y>360</Y>
+		<X>-160</X>
+		<Y>320</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -22,8 +22,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1763621245181</Id>
 		<Name><![CDATA[nUnburnt]]></Name>
-		<X>-150</X>
-		<Y>320</Y>
+		<X>-160</X>
+		<Y>280</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -41,8 +41,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1763621265995</Id>
 		<Name><![CDATA[nBurnt]]></Name>
-		<X>-150</X>
-		<Y>400</Y>
+		<X>-160</X>
+		<Y>360</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -60,8 +60,8 @@
 	<Variable Class="PlainVariable">
 		<Id>1763956972222</Id>
 		<Name><![CDATA[nCharred]]></Name>
-		<X>-150</X>
-		<Y>440</Y>
+		<X>-160</X>
+		<Y>400</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -107,8 +107,8 @@
 	<Variable Class="Parameter">
 		<Id>1763677663995</Id>
 		<Name><![CDATA[windDirection]]></Name>
-		<X>-460</X>
-		<Y>60</Y>
+		<X>-390</X>
+		<Y>300</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -135,8 +135,8 @@
 	<Variable Class="Parameter">
 		<Id>1763678141277</Id>
 		<Name><![CDATA[windSpeed]]></Name>
-		<X>-460</X>
-		<Y>30</Y>
+		<X>-390</X>
+		<Y>270</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -163,7 +163,7 @@
 	<Variable Class="Parameter">
 		<Id>1763767190378</Id>
 		<Name><![CDATA[minFuel]]></Name>
-		<X>-310</X>
+		<X>-390</X>
 		<Y>90</Y>
 		<Label>
 			<X>10</X>
@@ -192,7 +192,7 @@
 	<Variable Class="Parameter">
 		<Id>1763930788668</Id>
 		<Name><![CDATA[baseFuelLoad]]></Name>
-		<X>-310</X>
+		<X>-390</X>
 		<Y>30</Y>
 		<Label>
 			<X>10</X>
@@ -248,7 +248,7 @@
 	<Variable Class="Parameter">
 		<Id>1764283423530</Id>
 		<Name><![CDATA[moisture]]></Name>
-		<X>-310</X>
+		<X>-390</X>
 		<Y>150</Y>
 		<Label>
 			<X>10</X>
@@ -388,8 +388,8 @@
 	<Variable Class="Parameter">
 		<Id>1764653109309</Id>
 		<Name><![CDATA[temperature]]></Name>
-		<X>-460</X>
-		<Y>90</Y>
+		<X>-390</X>
+		<Y>330</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -417,8 +417,8 @@
 	<Variable Class="Parameter">
 		<Id>1764655364923</Id>
 		<Name><![CDATA[climateRecordList]]></Name>
-		<X>-460</X>
-		<Y>190</Y>
+		<X>-390</X>
+		<Y>420</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -445,8 +445,8 @@
 	<Variable Class="Parameter">
 		<Id>1764660441285</Id>
 		<Name><![CDATA[climateRecordIdx]]></Name>
-		<X>-460</X>
-		<Y>220</Y>
+		<X>-390</X>
+		<Y>450</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -473,8 +473,8 @@
 	<Variable Class="Parameter">
 		<Id>1764992162384</Id>
 		<Name><![CDATA[precipitation]]></Name>
-		<X>-460</X>
-		<Y>120</Y>
+		<X>-390</X>
+		<Y>360</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -501,8 +501,8 @@
 	<Variable Class="Parameter">
 		<Id>1764993271570</Id>
 		<Name><![CDATA[relativeHumidity]]></Name>
-		<X>-460</X>
-		<Y>150</Y>
+		<X>-390</X>
+		<Y>390</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -557,7 +557,7 @@
 	<Variable Class="Parameter">
 		<Id>1765004325309</Id>
 		<Name><![CDATA[baseFuelPerCellPt]]></Name>
-		<X>-310</X>
+		<X>-390</X>
 		<Y>60</Y>
 		<Label>
 			<X>10</X>
@@ -585,14 +585,14 @@
 	<Variable Class="Parameter">
 		<Id>1765005646256</Id>
 		<Name><![CDATA[fuelConsumptionRate]]></Name>
-		<X>-310</X>
+		<X>-390</X>
 		<Y>120</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
+		<PresentationFlag>false</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
 		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 			<Type><![CDATA[double]]></Type>
@@ -613,14 +613,14 @@
 	<Variable Class="Parameter">
 		<Id>1765007579305</Id>
 		<Name><![CDATA[droughtCode]]></Name>
-		<X>-310</X>
+		<X>-390</X>
 		<Y>180</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
 		</Label>
 		<PublicFlag>false</PublicFlag>
-		<PresentationFlag>true</PresentationFlag>
+		<PresentationFlag>false</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
 		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
 			<Type><![CDATA[double]]></Type>
@@ -631,6 +631,34 @@
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1765007579303</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1765009817590</Id>
+		<Name><![CDATA[daysSinceRain]]></Name>
+		<X>-390</X>
+		<Y>210</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>false</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[55]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1765009817588</Id>
 				<EditorContolType>TEXT_BOX</EditorContolType>
 				<MinSliderValue>0</MinSliderValue>
 				<MaxSliderValue>100</MaxSliderValue>

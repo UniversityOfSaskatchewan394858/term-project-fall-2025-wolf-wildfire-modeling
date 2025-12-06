@@ -99,6 +99,9 @@
 			<Parameter>
 				<ParameterName>droughtCode</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -219,6 +222,9 @@
 			<Parameter>
 				<ParameterName>droughtCode</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -242,7 +248,7 @@
 		<Name><![CDATA[HighBaseFuelMoisture]]></Name>
 		<CommandLineArguments/>
 		<MaximumMemory>512</MaximumMemory>
-		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
@@ -339,6 +345,9 @@
 			<Parameter>
 				<ParameterName>droughtCode</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -350,7 +359,7 @@
 		</PresentationProperties>
 		<ModelTimeProperties>
 			<StopOption>Never</StopOption>
-			<InitialDate>1735689600000</InitialDate>
+			<InitialDate>1747612800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1755302400000</FinalDate>
 			<FinalTime>89.0</FinalTime>
@@ -362,7 +371,7 @@
 		<Name><![CDATA[HighFuelConsumptionRate]]></Name>
 		<CommandLineArguments/>
 		<MaximumMemory>512</MaximumMemory>
-		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
@@ -452,9 +461,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>fuelConsumptionRate</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[1.5]]></Code>
+				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>droughtCode</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -467,7 +482,7 @@
 		</PresentationProperties>
 		<ModelTimeProperties>
 			<StopOption>Never</StopOption>
-			<InitialDate>1735689600000</InitialDate>
+			<InitialDate>1737244800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1755302400000</FinalDate>
 			<FinalTime>89.0</FinalTime>
@@ -479,7 +494,7 @@
 		<Name><![CDATA[LowBaseFuelMoisture]]></Name>
 		<CommandLineArguments/>
 		<MaximumMemory>512</MaximumMemory>
-		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
@@ -576,6 +591,9 @@
 			<Parameter>
 				<ParameterName>droughtCode</ParameterName>
 			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
 		</Parameters>
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
@@ -587,7 +605,7 @@
 		</PresentationProperties>
 		<ModelTimeProperties>
 			<StopOption>Never</StopOption>
-			<InitialDate>1735689600000</InitialDate>
+			<InitialDate>1737244800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1755302400000</FinalDate>
 			<FinalTime>89.0</FinalTime>
@@ -599,7 +617,7 @@
 		<Name><![CDATA[LowFuelConsumptionRate]]></Name>
 		<CommandLineArguments/>
 		<MaximumMemory>512</MaximumMemory>
-		<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
 		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 		<SeedValue>1</SeedValue>
 		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
@@ -689,9 +707,15 @@
 			</Parameter>
 			<Parameter>
 				<ParameterName>fuelConsumptionRate</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[0.1]]></Code>
+				</ParameterValue>
 			</Parameter>
 			<Parameter>
 				<ParameterName>droughtCode</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
 			</Parameter>
 		</Parameters>
 		<PresentationProperties>
@@ -704,7 +728,7 @@
 		</PresentationProperties>
 		<ModelTimeProperties>
 			<StopOption>Never</StopOption>
-			<InitialDate>1735689600000</InitialDate>
+			<InitialDate>1737244800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1755302400000</FinalDate>
 			<FinalTime>89.0</FinalTime>
