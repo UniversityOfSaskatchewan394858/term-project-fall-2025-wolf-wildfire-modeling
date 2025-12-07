@@ -71,3 +71,15 @@ for (Cell c : cells) {
 }
 /*ALCODEEND*/}
 
+double getDurationOfBurnHistData()
+{/*ALCODESTART::1765067303843*/
+burnDurationHistData.reset();
+for (Cell c : cells) {
+	// only considers burnable cells
+	if (c.fuelRatio != 0.0) {
+		burnDurationHistData.add(c.durationOfBurn);
+	}
+}
+
+/*ALCODEEND*/}
+

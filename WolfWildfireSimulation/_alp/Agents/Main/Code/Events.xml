@@ -3,8 +3,8 @@
 	<Event>
 		<Id>1764294797749</Id>
 		<Name><![CDATA[hourlyUpdate]]></Name>
-		<X>-150</X>
-		<Y>610</Y>
+		<X>-250</X>
+		<Y>560</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -39,8 +39,8 @@
 	<Event>
 		<Id>1765046620965</Id>
 		<Name><![CDATA[endSimulation]]></Name>
-		<X>-150</X>
-		<Y>690</Y>
+		<X>-250</X>
+		<Y>640</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>
@@ -75,8 +75,8 @@
 	<Event>
 		<Id>1765047775599</Id>
 		<Name><![CDATA[dailyUpdate]]></Name>
-		<X>-150</X>
-		<Y>650</Y>
+		<X>-250</X>
+		<Y>600</Y>
 		<Label>
 			<X>10</X>
 			<Y>0</Y>

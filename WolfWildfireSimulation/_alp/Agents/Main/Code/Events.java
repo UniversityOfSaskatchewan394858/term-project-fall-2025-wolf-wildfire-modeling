@@ -19,6 +19,7 @@ setFireSpreadRatePerCell();
 
 void endSimulation()
 {/*ALCODESTART::1765046620965*/
+getDurationOfBurnHistData();
 getEngine().finish()
 /*ALCODEEND*/}
 
@@ -33,5 +34,7 @@ for (Cell c : cells) {
 		c.durationOfBurn++;
 	}
 }
+
+getDurationOfBurnHistData();
 /*ALCODEEND*/}
 
