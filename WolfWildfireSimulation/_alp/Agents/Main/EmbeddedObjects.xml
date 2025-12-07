@@ -24,7 +24,23 @@
 				<ItemName>1761586380075</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>
-		<Parameters/>
+		<Parameters>
+			<Parameter>
+				<Name><![CDATA[fuelRatio]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[posY]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[posX]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[Neighbors]]></Name>
+			</Parameter>
+			<Parameter>
+				<Name><![CDATA[localMoisture]]></Name>
+			</Parameter>
+		</Parameters>
 		<ReplicationFlag>true</ReplicationFlag>
 		<Replication Class="CodeValue">
 			<Code><![CDATA[gridSize * gridSize]]></Code>
