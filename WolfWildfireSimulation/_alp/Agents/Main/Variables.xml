@@ -240,7 +240,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[8 // kg/m^2]]></Code>
+				<Code><![CDATA[3.5 // kg/m^2]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1763930788666</Id>
@@ -633,7 +633,7 @@
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[0.5]]></Code>
+				<Code><![CDATA[0.5 // kg/hr]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1765005646254</Id>
@@ -688,11 +688,11 @@ https://cwfis.cfs.nrcan.gc.ca/maps/fw?type=dc&year=2025&month=05&day=19
 		<PresentationFlag>false</PresentationFlag>
 		<ShowLabel>true</ShowLabel>
 		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
-			<Type><![CDATA[double]]></Type>
+			<Type><![CDATA[int]]></Type>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[55]]></Code>
+				<Code><![CDATA[19]]></Code>
 			</DefaultValue>
 			<ParameterEditor>
 				<Id>1765009817588</Id>

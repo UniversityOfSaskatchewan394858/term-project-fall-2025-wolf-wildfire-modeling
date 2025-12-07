@@ -58,25 +58,24 @@ double fireDangerExp = (temperature - relativeHumidity)/30.0 + (0.0234 * windSpe
 double fireDanger = 1.25 * droughtFactor * Math.pow(Math.E, fireDangerExp);
 
 for (Cell c : cells) {
-	if (c.isCellBurning) {
-		double totalFuel = 0;
-		for (int i = 0; i < 8; i++) {
-			totalFuel += c.remainingFuel[i];
-		}
-		
-		double fuelPerArea = totalFuel / cellArea;
-		double fuelWeight = fuelPerArea * 10; // tonnes per hectare
-		c.fireSpreadRate = 0.0012 * fireDanger * fuelWeight;
+	double totalFuel = 0;
+	for (int i = 0; i < 8; i++) {
+		totalFuel += c.remainingFuel[i];
 	}
+	
+	double fuelPerArea = totalFuel / cellArea;
+	double fuelWeight = fuelPerArea * 10; // tonnes per hectare
+	c.fireSpreadRate = 0.0012 * fireDanger * fuelWeight;
 }
+
 /*ALCODEEND*/}
 
 double getDurationOfBurnHistData()
 {/*ALCODESTART::1765067303843*/
 burnDurationHistData.reset();
 for (Cell c : cells) {
-	// only considers burnable cells
-	if (c.fuelRatio != 0.0) {
+	// only considers burnable cells which have been ignited
+	if (c.fuelRatio != 0.0 && c.numOfIgnitions > 0) {
 		burnDurationHistData.add(c.durationOfBurn);
 	}
 }

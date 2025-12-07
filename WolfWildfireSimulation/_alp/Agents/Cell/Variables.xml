@@ -285,7 +285,7 @@ get_Main().cellWidth / 2;]]></Code>
 			<UnitType>NONE</UnitType>
 			<SdArray>false</SdArray>
 			<DefaultValue Class="CodeValue">
-				<Code><![CDATA[// percent of how much of the cell is a water body
+				<Code><![CDATA[// percent of how much of the cell is a not water
 1]]></Code>
 			</DefaultValue>
 			<ParameterEditor>

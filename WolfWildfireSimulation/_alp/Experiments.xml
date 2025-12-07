@@ -115,8 +115,8 @@
 			<StopOption>Never</StopOption>
 			<InitialDate>1747612800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
-			<FinalDate>1747785600000</FinalDate>
-			<FinalTime>2.0</FinalTime>
+			<FinalDate>1755043200000</FinalDate>
+			<FinalTime>86.0</FinalTime>
 		</ModelTimeProperties>
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>
@@ -244,129 +244,6 @@
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>
 	<SimulationExperiment ActiveObjectClassId="1761256096259">
-		<Id>1764982015261</Id>
-		<Name><![CDATA[HighBaseFuelMoisture]]></Name>
-		<CommandLineArguments/>
-		<MaximumMemory>512</MaximumMemory>
-		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
-		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-		<SeedValue>1</SeedValue>
-		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
-		<VmArgs/>
-		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
-		<Presentation>
-			<Text>
-				<Id>1764982015263</Id>
-				<Name><![CDATA[text]]></Name>
-				<X>50</X>
-				<Y>30</Y>
-				<Label>
-					<X>10</X>
-					<Y>0</Y>
-				</Label>
-				<PublicFlag>true</PublicFlag>
-				<PresentationFlag>true</PresentationFlag>
-				<ShowLabel>false</ShowLabel>
-				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-				<EmbeddedIcon>false</EmbeddedIcon>
-				<Z>0</Z>
-				<Rotation>0.0</Rotation>
-				<Color>-12490271</Color>
-				<Text><![CDATA[WolfWildfireSimulation]]></Text>
-				<Font>
-					<Name><![CDATA[SansSerif]]></Name>
-					<Size>24</Size>
-					<Style>0</Style>
-				</Font>
-				<Alignment>LEFT</Alignment>
-			</Text>
-		</Presentation>
-		<Parameters>
-			<Parameter>
-				<ParameterName>gridSize</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>windDirection</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>windSpeed</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>minFuel</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>baseFuelLoad</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>globalDataAccessor</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>moisture</ParameterName>
-				<ParameterValue Class="CodeValue">
-					<Code><![CDATA[0.7 // %]]></Code>
-				</ParameterValue>
-			</Parameter>
-			<Parameter>
-				<ParameterName>simulationRealWidth</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>simulationRealHeight</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>initialiseWithData</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>cellWidth</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>temperature</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>climateRecordList</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>climateRecordIdx</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>precipitation</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>relativeHumidity</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>cellArea</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>baseFuelPerCellPt</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>fuelConsumptionRate</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>droughtCode</ParameterName>
-			</Parameter>
-			<Parameter>
-				<ParameterName>daysSinceRain</ParameterName>
-			</Parameter>
-		</Parameters>
-		<PresentationProperties>
-			<EnableZoomAndPanning>true</EnableZoomAndPanning>
-			<ExecutionMode>realTimeScaled</ExecutionMode>
-			<Title>WolfWildfireSimulation : HighBaseMoistureFuel</Title>
-			<EnableDeveloperPanel>true</EnableDeveloperPanel>
-			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
-			<RealTimeScale>1.0</RealTimeScale>
-		</PresentationProperties>
-		<ModelTimeProperties>
-			<StopOption>Never</StopOption>
-			<InitialDate>1747612800000</InitialDate>
-			<InitialTime>0.0</InitialTime>
-			<FinalDate>1755302400000</FinalDate>
-			<FinalTime>89.0</FinalTime>
-		</ModelTimeProperties>
-		<BypassInitialScreen>true</BypassInitialScreen>
-	</SimulationExperiment>
-	<SimulationExperiment ActiveObjectClassId="1761256096259">
 		<Id>1764981991528</Id>
 		<Name><![CDATA[HighFuelConsumptionRate]]></Name>
 		<CommandLineArguments/>
@@ -462,7 +339,7 @@
 			<Parameter>
 				<ParameterName>fuelConsumptionRate</ParameterName>
 				<ParameterValue Class="CodeValue">
-					<Code><![CDATA[1.5]]></Code>
+					<Code><![CDATA[0.9]]></Code>
 				</ParameterValue>
 			</Parameter>
 			<Parameter>
@@ -490,8 +367,8 @@
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>
 	<SimulationExperiment ActiveObjectClassId="1761256096259">
-		<Id>1764982024645</Id>
-		<Name><![CDATA[LowBaseFuelMoisture]]></Name>
+		<Id>1764982015261</Id>
+		<Name><![CDATA[HighMoisture]]></Name>
 		<CommandLineArguments/>
 		<MaximumMemory>512</MaximumMemory>
 		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
@@ -502,7 +379,7 @@
 		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
 		<Presentation>
 			<Text>
-				<Id>1764982024647</Id>
+				<Id>1764982015263</Id>
 				<Name><![CDATA[text]]></Name>
 				<X>50</X>
 				<Y>30</Y>
@@ -549,7 +426,7 @@
 			<Parameter>
 				<ParameterName>moisture</ParameterName>
 				<ParameterValue Class="CodeValue">
-					<Code><![CDATA[0.1 // %]]></Code>
+					<Code><![CDATA[0.5 // %]]></Code>
 				</ParameterValue>
 			</Parameter>
 			<Parameter>
@@ -598,17 +475,137 @@
 		<PresentationProperties>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
-			<Title>WolfWildfireSimulation : LowBaseMoistureFuel</Title>
+			<Title>WolfWildfireSimulation : HighBaseMoistureFuel</Title>
 			<EnableDeveloperPanel>true</EnableDeveloperPanel>
 			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 			<RealTimeScale>1.0</RealTimeScale>
 		</PresentationProperties>
 		<ModelTimeProperties>
 			<StopOption>Never</StopOption>
-			<InitialDate>1737244800000</InitialDate>
+			<InitialDate>1747612800000</InitialDate>
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1755302400000</FinalDate>
 			<FinalTime>89.0</FinalTime>
+		</ModelTimeProperties>
+		<BypassInitialScreen>true</BypassInitialScreen>
+	</SimulationExperiment>
+	<SimulationExperiment ActiveObjectClassId="1761256096259">
+		<Id>1765148226301</Id>
+		<Name><![CDATA[JanuaryFire]]></Name>
+		<CommandLineArguments/>
+		<MaximumMemory>512</MaximumMemory>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
+		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+		<SeedValue>1</SeedValue>
+		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+		<VmArgs/>
+		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+		<Presentation>
+			<Text>
+				<Id>1765148226303</Id>
+				<Name><![CDATA[text]]></Name>
+				<X>50</X>
+				<Y>30</Y>
+				<Label>
+					<X>10</X>
+					<Y>0</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-12490271</Color>
+				<Text><![CDATA[WolfWildfireSimulation]]></Text>
+				<Font>
+					<Name><![CDATA[SansSerif]]></Name>
+					<Size>24</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+		</Presentation>
+		<Parameters>
+			<Parameter>
+				<ParameterName>gridSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windDirection</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windSpeed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>minFuel</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelLoad</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>globalDataAccessor</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>moisture</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealHeight</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>initialiseWithData</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>temperature</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordList</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordIdx</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>precipitation</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>relativeHumidity</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellArea</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerCellPt</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>fuelConsumptionRate</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>droughtCode</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
+		</Parameters>
+		<PresentationProperties>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<ExecutionMode>realTimeScaled</ExecutionMode>
+			<Title>WolfWildfireSimulation : Simulation1</Title>
+			<EnableDeveloperPanel>true</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+			<RealTimeScale>1.0</RealTimeScale>
+		</PresentationProperties>
+		<ModelTimeProperties>
+			<StopOption>Never</StopOption>
+			<InitialDate>1735689600000</InitialDate>
+			<InitialTime>0.0</InitialTime>
+			<FinalDate>1755043200000</FinalDate>
+			<FinalTime>86.0</FinalTime>
 		</ModelTimeProperties>
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>
@@ -732,6 +729,489 @@
 			<InitialTime>0.0</InitialTime>
 			<FinalDate>1755302400000</FinalDate>
 			<FinalTime>89.0</FinalTime>
+		</ModelTimeProperties>
+		<BypassInitialScreen>true</BypassInitialScreen>
+	</SimulationExperiment>
+	<SimulationExperiment ActiveObjectClassId="1761256096259">
+		<Id>1764982024645</Id>
+		<Name><![CDATA[LowMoisture]]></Name>
+		<CommandLineArguments/>
+		<MaximumMemory>512</MaximumMemory>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
+		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+		<SeedValue>1</SeedValue>
+		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+		<VmArgs/>
+		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+		<Presentation>
+			<Text>
+				<Id>1764982024647</Id>
+				<Name><![CDATA[text]]></Name>
+				<X>50</X>
+				<Y>30</Y>
+				<Label>
+					<X>10</X>
+					<Y>0</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-12490271</Color>
+				<Text><![CDATA[WolfWildfireSimulation]]></Text>
+				<Font>
+					<Name><![CDATA[SansSerif]]></Name>
+					<Size>24</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+		</Presentation>
+		<Parameters>
+			<Parameter>
+				<ParameterName>gridSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windDirection</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windSpeed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>minFuel</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelLoad</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>globalDataAccessor</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>moisture</ParameterName>
+				<ParameterValue Class="CodeValue">
+					<Code><![CDATA[0.1 // %]]></Code>
+				</ParameterValue>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealHeight</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>initialiseWithData</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>temperature</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordList</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordIdx</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>precipitation</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>relativeHumidity</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellArea</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerCellPt</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>fuelConsumptionRate</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>droughtCode</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
+		</Parameters>
+		<PresentationProperties>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<ExecutionMode>realTimeScaled</ExecutionMode>
+			<Title>WolfWildfireSimulation : LowBaseMoistureFuel</Title>
+			<EnableDeveloperPanel>true</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+			<RealTimeScale>1.0</RealTimeScale>
+		</PresentationProperties>
+		<ModelTimeProperties>
+			<StopOption>Never</StopOption>
+			<InitialDate>1737244800000</InitialDate>
+			<InitialTime>0.0</InitialTime>
+			<FinalDate>1755302400000</FinalDate>
+			<FinalTime>89.0</FinalTime>
+		</ModelTimeProperties>
+		<BypassInitialScreen>true</BypassInitialScreen>
+	</SimulationExperiment>
+	<SimulationExperiment ActiveObjectClassId="1761256096259">
+		<Id>1765148242930</Id>
+		<Name><![CDATA[MayFire]]></Name>
+		<CommandLineArguments/>
+		<MaximumMemory>512</MaximumMemory>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
+		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+		<SeedValue>1</SeedValue>
+		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+		<VmArgs/>
+		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+		<Presentation>
+			<Text>
+				<Id>1765148242932</Id>
+				<Name><![CDATA[text]]></Name>
+				<X>50</X>
+				<Y>30</Y>
+				<Label>
+					<X>10</X>
+					<Y>0</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-12490271</Color>
+				<Text><![CDATA[WolfWildfireSimulation]]></Text>
+				<Font>
+					<Name><![CDATA[SansSerif]]></Name>
+					<Size>24</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+		</Presentation>
+		<Parameters>
+			<Parameter>
+				<ParameterName>gridSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windDirection</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windSpeed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>minFuel</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelLoad</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>globalDataAccessor</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>moisture</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealHeight</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>initialiseWithData</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>temperature</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordList</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordIdx</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>precipitation</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>relativeHumidity</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellArea</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerCellPt</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>fuelConsumptionRate</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>droughtCode</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
+		</Parameters>
+		<PresentationProperties>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<ExecutionMode>realTimeScaled</ExecutionMode>
+			<Title>WolfWildfireSimulation : Simulation1</Title>
+			<EnableDeveloperPanel>true</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+			<RealTimeScale>1.0</RealTimeScale>
+		</PresentationProperties>
+		<ModelTimeProperties>
+			<StopOption>Never</StopOption>
+			<InitialDate>1746057600000</InitialDate>
+			<InitialTime>0.0</InitialTime>
+			<FinalDate>1755043200000</FinalDate>
+			<FinalTime>86.0</FinalTime>
+		</ModelTimeProperties>
+		<BypassInitialScreen>true</BypassInitialScreen>
+	</SimulationExperiment>
+	<SimulationExperiment ActiveObjectClassId="1761256096259">
+		<Id>1765148262628</Id>
+		<Name><![CDATA[SeptemberFire]]></Name>
+		<CommandLineArguments/>
+		<MaximumMemory>512</MaximumMemory>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
+		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+		<SeedValue>1</SeedValue>
+		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+		<VmArgs/>
+		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+		<Presentation>
+			<Text>
+				<Id>1765148262630</Id>
+				<Name><![CDATA[text]]></Name>
+				<X>50</X>
+				<Y>30</Y>
+				<Label>
+					<X>10</X>
+					<Y>0</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-12490271</Color>
+				<Text><![CDATA[WolfWildfireSimulation]]></Text>
+				<Font>
+					<Name><![CDATA[SansSerif]]></Name>
+					<Size>24</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+		</Presentation>
+		<Parameters>
+			<Parameter>
+				<ParameterName>gridSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windDirection</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windSpeed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>minFuel</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelLoad</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>globalDataAccessor</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>moisture</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealHeight</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>initialiseWithData</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>temperature</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordList</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordIdx</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>precipitation</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>relativeHumidity</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellArea</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerCellPt</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>fuelConsumptionRate</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>droughtCode</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
+		</Parameters>
+		<PresentationProperties>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<ExecutionMode>realTimeScaled</ExecutionMode>
+			<Title>WolfWildfireSimulation : Simulation1</Title>
+			<EnableDeveloperPanel>true</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+			<RealTimeScale>1.0</RealTimeScale>
+		</PresentationProperties>
+		<ModelTimeProperties>
+			<StopOption>Never</StopOption>
+			<InitialDate>1756684800000</InitialDate>
+			<InitialTime>0.0</InitialTime>
+			<FinalDate>1755043200000</FinalDate>
+			<FinalTime>86.0</FinalTime>
+		</ModelTimeProperties>
+		<BypassInitialScreen>true</BypassInitialScreen>
+	</SimulationExperiment>
+	<SimulationExperiment ActiveObjectClassId="1761256096259">
+		<Id>1765139792269</Id>
+		<Name><![CDATA[TimeframeOfWolfWildfire]]></Name>
+		<CommandLineArguments/>
+		<MaximumMemory>512</MaximumMemory>
+		<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
+		<CustomGeneratorCode>new Random()</CustomGeneratorCode>
+		<SeedValue>1</SeedValue>
+		<SelectionModeForSimultaneousEvents>LIFO</SelectionModeForSimultaneousEvents>
+		<VmArgs/>
+		<LoadRootFromSnapshot>false</LoadRootFromSnapshot>
+		<Presentation>
+			<Text>
+				<Id>1765139792271</Id>
+				<Name><![CDATA[text]]></Name>
+				<X>50</X>
+				<Y>30</Y>
+				<Label>
+					<X>10</X>
+					<Y>0</Y>
+				</Label>
+				<PublicFlag>true</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>false</ShowLabel>
+				<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+				<EmbeddedIcon>false</EmbeddedIcon>
+				<Z>0</Z>
+				<Rotation>0.0</Rotation>
+				<Color>-12490271</Color>
+				<Text><![CDATA[WolfWildfireSimulation]]></Text>
+				<Font>
+					<Name><![CDATA[SansSerif]]></Name>
+					<Size>24</Size>
+					<Style>0</Style>
+				</Font>
+				<Alignment>LEFT</Alignment>
+			</Text>
+		</Presentation>
+		<Parameters>
+			<Parameter>
+				<ParameterName>gridSize</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windDirection</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>windSpeed</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>minFuel</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelLoad</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>globalDataAccessor</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>moisture</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>simulationRealHeight</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>initialiseWithData</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellWidth</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>temperature</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordList</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>climateRecordIdx</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>precipitation</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>relativeHumidity</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>cellArea</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>baseFuelPerCellPt</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>fuelConsumptionRate</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>droughtCode</ParameterName>
+			</Parameter>
+			<Parameter>
+				<ParameterName>daysSinceRain</ParameterName>
+			</Parameter>
+		</Parameters>
+		<PresentationProperties>
+			<EnableZoomAndPanning>true</EnableZoomAndPanning>
+			<ExecutionMode>realTimeScaled</ExecutionMode>
+			<Title>WolfWildfireSimulation : Simulation1</Title>
+			<EnableDeveloperPanel>true</EnableDeveloperPanel>
+			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
+			<RealTimeScale>1.0</RealTimeScale>
+		</PresentationProperties>
+		<ModelTimeProperties>
+			<StopOption>Stop at specified date</StopOption>
+			<InitialDate>1747612800000</InitialDate>
+			<InitialTime>0.0</InitialTime>
+			<FinalDate>1755043200000</FinalDate>
+			<FinalTime>86.0</FinalTime>
 		</ModelTimeProperties>
 		<BypassInitialScreen>true</BypassInitialScreen>
 	</SimulationExperiment>

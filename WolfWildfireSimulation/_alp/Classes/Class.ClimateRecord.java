@@ -7,7 +7,6 @@ public class ClimateRecord {
 	public Double precip; // mm
 	public Double windDir; // 10s of deg
 	public Double windSpd; // km/h
-	public Double stnPress; // kPa
 
 
 	/*
@@ -23,7 +22,6 @@ public class ClimateRecord {
 	    precip = getDoubleData(c[16]);
 	    windDir = getDoubleData(c[18]);
 	    windSpd = getDoubleData(c[20]);
-	    stnPress = getDoubleData(c[24]);
 	
 	}
 	
@@ -45,6 +43,5 @@ public class ClimateRecord {
 		if (Double.isNaN(relHumPercent)) relHumPercent = prev.relHumPercent;
 		if (Double.isNaN(windDir)) windDir = prev.windDir;
 		if (Double.isNaN(windSpd)) windSpd = prev.windSpd;
-		if (Double.isNaN(stnPress)) stnPress = prev.stnPress;
 	}
 }
